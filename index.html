@@ -83,6 +83,7 @@
     "servesCuisine": "Coffee",
     "sameAs": [
       "https://www.instagram.com/lattehauscoffee/",
+      "https://www.tiktok.com/@lattehauscoffee",
       "https://www.yelp.com/biz/latte-haus-dallas"
     ],
     "aggregateRating": {
@@ -116,6 +117,7 @@
     <a href="#order" onclick="toggleMobile()">Order</a>
     <a href="#location" onclick="toggleMobile()">Visit</a>
     <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" onclick="toggleMobile()">Instagram</a>
+    <a href="https://www.tiktok.com/@lattehauscoffee" target="_blank" onclick="toggleMobile()">TikTok</a>
   </div>
 
   <!-- HERO -->
@@ -123,14 +125,14 @@
     <div class="hero-content">
       <div class="hero-mascot">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M30 75 C30 75 25 45 30 30 C35 15 65 15 70 30 C75 45 70 75 70 75 Z" stroke="var(--espresso)" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <path d="M70 45 C70 45 85 42 85 55 C85 65 70 62 70 62" stroke="var(--espresso)" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <circle cx="42" cy="48" r="3" fill="var(--espresso)"/>
-          <circle cx="58" cy="48" r="3" fill="var(--espresso)"/>
-          <path d="M44 58 Q50 64 56 58" stroke="var(--espresso)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-          <path d="M40 18 L38 8" stroke="var(--espresso)" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M50 16 L50 5" stroke="var(--espresso)" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M60 18 L62 8" stroke="var(--espresso)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M30 75 C30 75 25 45 30 30 C35 15 65 15 70 30 C75 45 70 75 70 75 Z" stroke="var(--cream)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M70 45 C70 45 85 42 85 55 C85 65 70 62 70 62" stroke="var(--cream)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <circle cx="42" cy="48" r="3" fill="var(--cream)"/>
+          <circle cx="58" cy="48" r="3" fill="var(--cream)"/>
+          <path d="M44 58 Q50 64 56 58" stroke="var(--cream)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M40 18 L38 8" stroke="var(--cream)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M50 16 L50 5" stroke="var(--cream)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M60 18 L62 8" stroke="var(--cream)" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
       </div>
       <p class="hero-tag">Oak Cliff · Dallas, Texas</p>
@@ -145,6 +147,12 @@
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </div>
   </section>
+
+  <!-- PROMO BANNER -->
+  <div class="promo-banner" id="promoBanner">
+    First visit? Show this page for a free size upgrade ☕
+    <button class="promo-banner-close" onclick="dismissBanner()" aria-label="Dismiss">&times;</button>
+  </div>
 
   <!-- PHOTO STRIP -->
   <div class="photo-strip">
@@ -259,6 +267,8 @@
       </div>
 
       <p class="menu-note reveal">Oat, almond &amp; coconut milk available · Prices may vary · Menu items subject to availability</p>
+      <!-- PRICE: Customization add-ons — update prices below -->
+      <p class="menu-note reveal">Add flavor shot +$0.75 · Extra shot +$1 · Size up +$1</p>
     </div>
   </section>
 
@@ -307,7 +317,7 @@
     <div class="reviews-inner">
       <p class="section-tag reveal">What People Are Saying</p>
       <h2 class="reveal">Loved by Oak Cliff</h2>
-      <p class="reviews-rating reveal">★ ★ ★ ★ ★ &nbsp; 4.9 on Google · 34 Reviews</p>
+      <p class="reviews-rating reveal">★ ★ ★ ★ ★ &nbsp; <a href="https://maps.google.com/?q=Latte+Haus+Dallas+TX" target="_blank">4.9 on Google · 34 Reviews</a></p>
       <div class="reviews-grid reveal">
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
@@ -325,6 +335,37 @@
           <p class="review-author">— Google Review</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="instagram">
+    <div class="instagram-inner">
+      <p class="section-tag reveal">On the Gram</p>
+      <h2 class="reveal">See What's Brewing</h2>
+      <p class="reveal">Follow along for daily specials, behind-the-scenes, and that Oak Cliff energy.</p>
+      <div class="instagram-grid reveal">
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="instagram-card">
+          <div class="instagram-card-icon">☕</div>
+          <div class="instagram-card-label">Lattes</div>
+        </a>
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="instagram-card">
+          <div class="instagram-card-icon">🎨</div>
+          <div class="instagram-card-label">Latte Art</div>
+        </a>
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="instagram-card">
+          <div class="instagram-card-icon">🍪</div>
+          <div class="instagram-card-label">Treats</div>
+        </a>
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="instagram-card">
+          <div class="instagram-card-icon">🏡</div>
+          <div class="instagram-card-label">The Vibe</div>
+        </a>
+      </div>
+      <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="instagram-follow reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Follow @lattehauscoffee
+      </a>
     </div>
   </section>
 
@@ -349,6 +390,7 @@
           <div class="location-extra"><span>🐕</span> Dog Friendly</div>
           <div class="location-extra"><span>💳</span> Cards &amp; Cash</div>
           <div class="location-extra"><span>📶</span> Free WiFi</div>
+          <div class="location-extra"><span>🅿️</span> Free Parking Lot</div>
         </div>
       </div>
       <div class="location-map reveal">
@@ -362,9 +404,23 @@
     <div class="footer-inner">
       <div class="footer-logo">Latte Haus</div>
       <p class="footer-tagline-main">With Latte Love from Oak Cliff</p>
+
+      <!-- Footer email signup -->
+      <div class="footer-signup">
+        <form id="footerSignupForm" class="footer-signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="email" name="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="footer-signup-note">Get seasonal specials &amp; promos.</p>
+        <p id="footerSignupSuccess" class="footer-signup-success">Subscribed! Stay tuned.</p>
+      </div>
+
       <div class="footer-socials">
         <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="footer-social" aria-label="Instagram">
           <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@lattehauscoffee" target="_blank" class="footer-social" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 0010.86 4.46V13.2a8.16 8.16 0 005.58 2.2V12a4.85 4.85 0 01-3.58-1.59V6.69h3.58z"/></svg>
         </a>
         <a href="https://www.yelp.com/biz/latte-haus-dallas" target="_blank" class="footer-social" aria-label="Yelp">
           <svg viewBox="0 0 24 24"><path d="M12.271 11.826c-.257.076-.535-.082-.611-.339l-2.005-6.839c-.188-.64.345-1.264 1.011-1.184l4.08.488c.666.08 1.016.822.664 1.39l-2.075 3.506-.148.284c-.103.203-.254.382-.44.505l-.476.189zm-4.089 1.837c-.257.076-.512-.103-.567-.364l-.754-3.508c-.14-.651.469-1.2 1.1-.992l2.775.913c.632.208.813.988.328 1.409l-2.447 2.154c-.112.098-.244.27-.435.388zm-.534 2.422c.107-.243.397-.346.637-.228l4.297 2.108c.579.284.537 1.124-.079 1.349l-3.828 1.397c-.616.225-1.205-.329-1.062-.996l.755-3.535c.028-.032.058-.062.082-.095h-.002zm8.826-3.037c-.055-.265.125-.521.393-.565l5.093-.835c.648-.106 1.154.535.912 1.154l-1.76 4.498c-.242.618-1.07.66-1.377.07l-2.618-5.016c-.12-.103-.331-.106-.431-.159l-.212-.147zm-.688-2.302c.194-.183.498-.16.668.047l2.89 3.516c.41.499.027 1.244-.614 1.196l-3.605-.27c-.64-.048-.944-.79-.519-1.232l1.18-3.257z"/></svg>
