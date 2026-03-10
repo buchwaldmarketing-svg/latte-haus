@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latte Haus — With Latte Love from Oak Cliff</title>
+  <meta name="description" content="Latte Haus is a handcrafted coffee shop in Oak Cliff, Dallas TX. Coffee, treats, teas & seasonal specials. 2446 W Kiest Blvd.">
+  <meta name="keywords" content="coffee shop, Oak Cliff, Dallas TX, latte, cold brew, matcha, espresso, Latte Haus, W Kiest Blvd">
+  <meta name="author" content="Latte Haus">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://lattehaus.coffee">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Latte Haus — With Latte Love from Oak Cliff">
+  <meta property="og:description" content="Handcrafted coffee, treats & teas in Oak Cliff, Dallas TX. A cozy, modern space for our neighborhood to call home.">
+  <meta property="og:image" content="https://lattehaus.coffee/images/storefront.jpg">
+  <meta property="og:url" content="https://lattehaus.coffee">
+  <meta property="og:site_name" content="Latte Haus">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Latte Haus — With Latte Love from Oak Cliff">
+  <meta name="twitter:description" content="Handcrafted coffee, treats & teas in Oak Cliff, Dallas TX.">
+  <meta name="twitter:image" content="https://lattehaus.coffee/images/storefront.jpg">
+
+  <!-- Favicon — coffee cup mascot SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 75 C30 75 25 45 30 30 C35 15 65 15 70 30 C75 45 70 75 70 75 Z' stroke='%232C1810' stroke-width='3' fill='%23F5F0E8' stroke-linecap='round'/%3E%3Cpath d='M70 45 C70 45 85 42 85 55 C85 65 70 62 70 62' stroke='%232C1810' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='42' cy='48' r='3' fill='%232C1810'/%3E%3Ccircle cx='58' cy='48' r='3' fill='%232C1810'/%3E%3Cpath d='M44 58 Q50 64 56 58' stroke='%232C1810' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data — LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CoffeeShop",
+    "name": "Latte Haus",
+    "description": "Handcrafted coffee shop in Oak Cliff, Dallas TX. Coffee, treats, teas & seasonal specials.",
+    "url": "https://lattehaus.coffee",
+    "telephone": "",
+    "image": "https://lattehaus.coffee/images/storefront.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2446 W Kiest Blvd",
+      "addressLocality": "Dallas",
+      "addressRegion": "TX",
+      "postalCode": "75233",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 32.6972,
+      "longitude": -96.8693
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "16:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "08:00",
+        "closes": "11:00"
+      }
+    ],
+    "priceRange": "$",
+    "servesCuisine": "Coffee",
+    "sameAs": [
+      "https://www.instagram.com/lattehauscoffee/",
+      "https://www.yelp.com/biz/latte-haus-dallas"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "34",
+      "bestRating": "5"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Latte Haus<span class="logo-icon">☕</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#location">Visit</a></li>
+      <li><a href="#order" class="nav-order-btn">Order Now</a></li>
+    </ul>
+    <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="toggleMobile()">About</a>
+    <a href="#menu" onclick="toggleMobile()">Menu</a>
+    <a href="#order" onclick="toggleMobile()">Order</a>
+    <a href="#location" onclick="toggleMobile()">Visit</a>
+    <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" onclick="toggleMobile()">Instagram</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-mascot">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 75 C30 75 25 45 30 30 C35 15 65 15 70 30 C75 45 70 75 70 75 Z" stroke="var(--espresso)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M70 45 C70 45 85 42 85 55 C85 65 70 62 70 62" stroke="var(--espresso)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <circle cx="42" cy="48" r="3" fill="var(--espresso)"/>
+          <circle cx="58" cy="48" r="3" fill="var(--espresso)"/>
+          <path d="M44 58 Q50 64 56 58" stroke="var(--espresso)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M40 18 L38 8" stroke="var(--espresso)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M50 16 L50 5" stroke="var(--espresso)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M60 18 L62 8" stroke="var(--espresso)" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p class="hero-tag">Oak Cliff · Dallas, Texas</p>
+      <h1>With <em>Latte</em><br>Love from<br>Oak Cliff</h1>
+      <p class="hero-subtitle">Handcrafted coffee, treats & teas. A cozy, modern space for our neighborhood to call home.</p>
+      <div class="hero-actions">
+        <a href="#order" class="btn-primary">Order Ahead</a>
+        <a href="#menu" class="btn-secondary">See the Menu</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- PHOTO STRIP -->
+  <div class="photo-strip">
+    <img src="images/interior.jpg" alt="Latte Haus interior — arched mirror and velvet seating" loading="lazy">
+    <img src="images/mural.jpg" alt="Latte Haus hand-drawn mural featuring Oak Cliff landmarks" loading="lazy">
+    <img src="images/storefront.jpg" alt="Latte Haus storefront on W Kiest Blvd" loading="lazy">
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner reveal">
+      <div class="about-image">
+        <img src="images/sign.jpg" alt="With Latte Love from Oak Cliff — framed sign at Latte Haus" loading="lazy">
+        <div class="about-badge">Dog Friendly ✦</div>
+      </div>
+      <div class="about-text">
+        <p class="section-tag">Our Story</p>
+        <h2>Brewing Something Special for Oak Cliff</h2>
+        <p>Latte Haus was born from a simple idea — that Oak Cliff deserves a coffee shop where everyone feels like family. Founded by Emily, a passionate young entrepreneur, we opened our doors on W Kiest Blvd to bring handcrafted drinks, warm energy, and a beautifully designed space to the neighborhood.</p>
+        <p>Whether you're grabbing your morning cold brew, settling in for a midday matcha, or catching up with friends over one of our seasonal specials — this is your space. We're not just making coffee. We're building community, one cup at a time.</p>
+        <div class="about-values">
+          <div class="about-value">
+            <div class="about-value-icon">🤝</div>
+            <div class="about-value-label">Community First</div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">✨</div>
+            <div class="about-value-label">Handcrafted</div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">🐕</div>
+            <div class="about-value-label">Dogs Welcome</div>
+          </div>
+          <div class="about-value">
+            <div class="about-value-icon">🌿</div>
+            <div class="about-value-label">Quality First</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="menu-inner">
+      <div class="menu-header reveal">
+        <p class="section-tag">The Menu</p>
+        <h2>What We're Pouring</h2>
+        <p>Handcrafted daily. Seasonal specials rotate — follow us on Instagram for the latest.</p>
+      </div>
+      <div class="menu-tabs reveal">
+        <button class="menu-tab active" onclick="switchTab('coffee')">Coffee</button>
+        <button class="menu-tab" onclick="switchTab('specialty')">Specialty</button>
+        <button class="menu-tab" onclick="switchTab('tea')">Tea & More</button>
+        <button class="menu-tab" onclick="switchTab('treats')">Treats</button>
+      </div>
+
+      <!-- ========== COFFEE TAB ========== -->
+      <div class="menu-category active" id="tab-coffee">
+        <!-- PRICE: Drip Coffee — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Drip Coffee</div><div class="menu-item-desc">House blend, freshly brewed</div></div><div class="menu-item-price">$3</div></div>
+        <!-- PRICE: Cold Brew — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Cold Brew</div><div class="menu-item-desc">Smooth &amp; bold, steeped 24 hours</div></div><div class="menu-item-price">$5</div></div>
+        <!-- PRICE: Espresso — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Espresso</div><div class="menu-item-desc">Single or double shot</div></div><div class="menu-item-price">$3 / $4</div></div>
+        <!-- PRICE: Americano — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Americano</div><div class="menu-item-desc">Espresso + hot water</div></div><div class="menu-item-price">$4</div></div>
+        <!-- PRICE: Latte — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Latte</div><div class="menu-item-desc">Espresso + steamed milk · Hot or iced</div></div><div class="menu-item-price">$5</div></div>
+        <!-- PRICE: Cappuccino — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Cappuccino</div><div class="menu-item-desc">Espresso, steamed milk &amp; foam</div></div><div class="menu-item-price">$5</div></div>
+      </div>
+
+      <!-- ========== SPECIALTY TAB ========== -->
+      <div class="menu-category" id="tab-specialty">
+        <!-- PRICE: Gingerbread Latte — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Gingerbread Latte</div><div class="menu-item-desc">Seasonal house favorite with warm spices</div></div><div class="menu-item-price">$6</div></div>
+        <!-- PRICE: S'mores Matcha — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">S'mores Matcha</div><div class="menu-item-desc">Matcha, chocolate &amp; toasted marshmallow</div></div><div class="menu-item-price">$7</div></div>
+        <!-- PRICE: Vanilla Latte — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Vanilla Latte</div><div class="menu-item-desc">Classic vanilla bean with espresso</div></div><div class="menu-item-price">$6</div></div>
+        <!-- PRICE: Caramel Macchiato — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Caramel Macchiato</div><div class="menu-item-desc">Layered espresso, vanilla &amp; caramel drizzle</div></div><div class="menu-item-price">$6</div></div>
+        <!-- PRICE: Mocha — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Mocha</div><div class="menu-item-desc">Rich chocolate + espresso + steamed milk</div></div><div class="menu-item-price">$6</div></div>
+        <!-- PRICE: Seasonal Special — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Seasonal Special</div><div class="menu-item-desc">Ask your barista — it changes monthly!</div></div><div class="menu-item-price">$6–$7</div></div>
+      </div>
+
+      <!-- ========== TEA TAB ========== -->
+      <div class="menu-category" id="tab-tea">
+        <!-- PRICE: Matcha Latte — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Matcha Latte</div><div class="menu-item-desc">Ceremonial grade, hot or iced</div></div><div class="menu-item-price">$6</div></div>
+        <!-- PRICE: Chai Latte — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Chai Latte</div><div class="menu-item-desc">Spiced chai with steamed milk</div></div><div class="menu-item-price">$5</div></div>
+        <!-- PRICE: Hot Tea — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Hot Tea</div><div class="menu-item-desc">Selection of loose leaf &amp; bagged teas</div></div><div class="menu-item-price">$3</div></div>
+        <!-- PRICE: London Fog — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">London Fog</div><div class="menu-item-desc">Earl Grey, vanilla &amp; steamed milk</div></div><div class="menu-item-price">$5</div></div>
+      </div>
+
+      <!-- ========== TREATS TAB ========== -->
+      <div class="menu-category" id="tab-treats">
+        <!-- PRICE: Pastries — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Pastries</div><div class="menu-item-desc">Rotating selection, baked fresh</div></div><div class="menu-item-price">$3–$5</div></div>
+        <!-- PRICE: Cookies — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Cookies</div><div class="menu-item-desc">House-baked, warm &amp; ready</div></div><div class="menu-item-price">$3</div></div>
+        <!-- PRICE: Muffins — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Muffins</div><div class="menu-item-desc">Blueberry, banana nut &amp; seasonal</div></div><div class="menu-item-price">$4</div></div>
+        <!-- PRICE: Snack Bites — update price below -->
+        <div class="menu-item"><div><div class="menu-item-name">Snack Bites</div><div class="menu-item-desc">Energy bites, granola bars &amp; more</div></div><div class="menu-item-price">$3</div></div>
+      </div>
+
+      <p class="menu-note reveal">Oat, almond &amp; coconut milk available · Prices may vary · Menu items subject to availability</p>
+    </div>
+  </section>
+
+  <!-- ORDER -->
+  <section class="order" id="order">
+    <div class="order-inner">
+      <p class="section-tag reveal">Skip the Wait</p>
+      <h2 class="reveal">Order Ahead,<br>Pick Up Happy</h2>
+      <p class="reveal">Place your order before you leave the house. We'll have it ready when you walk in.</p>
+      <div class="order-options reveal">
+        <div class="order-card">
+          <div class="order-card-icon">📱</div>
+          <h3>Mobile Order</h3>
+          <p>Order from your phone and skip the line.</p>
+        </div>
+        <div class="order-card">
+          <div class="order-card-icon">🚗</div>
+          <h3>Quick Pickup</h3>
+          <p>Ready when you arrive. Grab &amp; go.</p>
+        </div>
+        <div class="order-card">
+          <div class="order-card-icon">👥</div>
+          <h3>Group Orders</h3>
+          <p>Ordering for the crew? We got you.</p>
+        </div>
+      </div>
+      <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="btn-primary reveal">DM Us to Order — App Coming Soon</a>
+      <p class="reveal" style="margin-top:1rem; font-size:0.75rem; color:var(--charcoal); opacity:0.4;">Online ordering launching soon. DM us on Instagram to place orders now.</p>
+
+      <!-- EMAIL SIGNUP -->
+      <div class="email-signup reveal">
+        <h3>Stay in the Loop</h3>
+        <p>Get updates on seasonal specials, events & promos — straight to your inbox.</p>
+        <form id="signupForm" class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <button type="submit">Join Our List</button>
+        </form>
+        <p id="signupSuccess" class="signup-success">You're in! We'll keep you posted.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <div class="reviews-inner">
+      <p class="section-tag reveal">What People Are Saying</p>
+      <h2 class="reveal">Loved by Oak Cliff</h2>
+      <p class="reviews-rating reveal">★ ★ ★ ★ ★ &nbsp; 4.9 on Google · 34 Reviews</p>
+      <div class="reviews-grid reveal">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"So happy to have a coffee shop in my backyard again! Friendly service, yummy coffee, and the new vibe is so clean and modern. Welcome to the neighborhood!"</p>
+          <p class="review-author">— Google Review</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Drinks are good every time! Energy is friendly! The gingerbread and the s'mores matcha are 10/10!!"</p>
+          <p class="review-author">— Google Review</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"The cutest most aesthetic establishment. Super clean and the staff was so friendly. The owner Emily was the sweetest, most bubbly young entrepreneur."</p>
+          <p class="review-author">— Google Review</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location" id="location">
+    <div class="location-inner">
+      <div class="location-text reveal">
+        <p class="section-tag">Find Us</p>
+        <h2>Come Say Hey</h2>
+        <div class="location-address">
+          <strong>2446 W Kiest Blvd</strong><br>
+          Dallas, TX 75233<br>
+          Oak Cliff<br><br>
+          <a href="https://maps.google.com/?q=2446+W+Kiest+Blvd+Dallas+TX+75233" target="_blank">Get Directions →</a>
+        </div>
+        <div class="hours-grid">
+          <div class="hours-row"><span class="hours-day">Monday — Friday</span><span class="hours-time">7:00 AM — 7:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">8:00 AM — 4:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">8:00 AM — 11:00 AM</span></div>
+        </div>
+        <div class="location-extras">
+          <div class="location-extra"><span>🐕</span> Dog Friendly</div>
+          <div class="location-extra"><span>💳</span> Cards &amp; Cash</div>
+          <div class="location-extra"><span>📶</span> Free WiFi</div>
+        </div>
+      </div>
+      <div class="location-map reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.8!2d-96.87156!3d32.69718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e99f0d33a6c71%3A0x8f5e0f4e97e9e8a0!2s2446+W+Kiest+Blvd%2C+Dallas%2C+TX+75233!5e0!3m2!1sen!2sus!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Latte Haus</div>
+      <p class="footer-tagline-main">With Latte Love from Oak Cliff</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="footer-social" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.yelp.com/biz/latte-haus-dallas" target="_blank" class="footer-social" aria-label="Yelp">
+          <svg viewBox="0 0 24 24"><path d="M12.271 11.826c-.257.076-.535-.082-.611-.339l-2.005-6.839c-.188-.64.345-1.264 1.011-1.184l4.08.488c.666.08 1.016.822.664 1.39l-2.075 3.506-.148.284c-.103.203-.254.382-.44.505l-.476.189zm-4.089 1.837c-.257.076-.512-.103-.567-.364l-.754-3.508c-.14-.651.469-1.2 1.1-.992l2.775.913c.632.208.813.988.328 1.409l-2.447 2.154c-.112.098-.244.27-.435.388zm-.534 2.422c.107-.243.397-.346.637-.228l4.297 2.108c.579.284.537 1.124-.079 1.349l-3.828 1.397c-.616.225-1.205-.329-1.062-.996l.755-3.535c.028-.032.058-.062.082-.095h-.002zm8.826-3.037c-.055-.265.125-.521.393-.565l5.093-.835c.648-.106 1.154.535.912 1.154l-1.76 4.498c-.242.618-1.07.66-1.377.07l-2.618-5.016c-.12-.103-.331-.106-.431-.159l-.212-.147zm-.688-2.302c.194-.183.498-.16.668.047l2.89 3.516c.41.499.027 1.244-.614 1.196l-3.605-.27c-.64-.048-.944-.79-.519-1.232l1.18-3.257z"/></svg>
+        </a>
+        <a href="https://maps.google.com/?q=Latte+Haus+Dallas" target="_blank" class="footer-social" aria-label="Google Maps">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Latte Haus · All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
