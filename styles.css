@@ -706,7 +706,7 @@ footer {
   .nav-links { display: none; }
   .mobile-toggle { display: flex; }
   .photo-strip {
-    grid-template-columns: repeat(6, 80vw);
+    grid-template-columns: repeat(5, 80vw);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
