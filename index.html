@@ -148,18 +148,98 @@
     </div>
   </section>
 
-  <!-- MATCHA FEATURE -->
-  <section class="matcha-feature">
-    <div class="matcha-inner">
-      <div class="matcha-text reveal">
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <div class="reviews-inner">
+      <p class="section-tag reveal">What People Are Saying</p>
+      <h2 class="reveal">Loved by Oak Cliff</h2>
+      <p class="reviews-rating reveal">★ ★ ★ ★ ★ &nbsp; <a href="https://maps.google.com/?q=Latte+Haus+Dallas+TX" target="_blank">4.9 on Google · 34 Reviews</a></p>
+    </div>
+  </section>
+
+  <!-- MATCHA + MENU -->
+  <section class="matcha-menu" id="menu">
+    <div class="matcha-menu-inner">
+      <div class="matcha-side reveal">
         <p class="section-tag">Now Serving</p>
         <h2>Matcha Has Arrived</h2>
-        <p>We're officially pouring matcha — and it's not basic. Try our Blueberry Muffin Matcha with layered blueberry, matcha, and vanilla foam. Or keep it classic with a straight Matcha Latte. Either way, it's handcrafted and worth the trip.</p>
-        <a href="#menu" class="btn-primary">See the Menu</a>
+        <p>We're officially pouring matcha — and it's not basic. Try our Blueberry Muffin Matcha with layered blueberry, matcha, and vanilla foam. Or keep it classic with a straight Matcha Latte.</p>
+        <div class="matcha-image">
+          <img src="images/blueberry-matcha-hero.jpg" alt="Blueberry Muffin Matcha at Latte Haus — layered blueberry and matcha with vanilla foam">
+        </div>
+        <a href="#order" class="btn-primary matcha-order-btn">Order Now</a>
       </div>
-      <div class="matcha-image reveal">
-        <img src="images/blueberry-matcha-hero.jpg" alt="Blueberry Muffin Matcha at Latte Haus — layered blueberry and matcha with vanilla foam">
+      <div class="menu-side reveal">
+        <div class="menu-header">
+          <p class="section-tag">The Menu</p>
+          <h2>What We're Pouring</h2>
+          <p>Handcrafted daily. Seasonal specials rotate — follow us on Instagram for the latest.</p>
+        </div>
+        <div class="menu-tabs">
+          <button class="menu-tab active" onclick="switchTab('coffee')">Coffee</button>
+          <button class="menu-tab" onclick="switchTab('specialty')">Specialty</button>
+          <button class="menu-tab" onclick="switchTab('tea')">Tea & More</button>
+          <button class="menu-tab" onclick="switchTab('treats')">Treats</button>
+        </div>
+
+        <!-- ========== COFFEE TAB ========== -->
+        <div class="menu-category active" id="tab-coffee">
+          <div class="menu-item"><div><div class="menu-item-name">Latte</div><div class="menu-item-desc">Espresso + steamed milk · Hot or iced</div></div><div class="menu-item-price">$5.25 / $6.25</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Cappuccino</div><div class="menu-item-desc">Espresso, steamed milk &amp; foam</div></div><div class="menu-item-price">$4.50</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Americano</div><div class="menu-item-desc">Espresso + hot water</div></div><div class="menu-item-price">$4.75</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Macchiato</div><div class="menu-item-desc">Espresso with a touch of foam</div></div><div class="menu-item-price">$3.25</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Cortado</div><div class="menu-item-desc">Equal parts espresso &amp; steamed milk</div></div><div class="menu-item-price">$4</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Drip Coffee</div><div class="menu-item-desc">House blend, freshly brewed</div></div><div class="menu-item-price">$3.50</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Espresso</div><div class="menu-item-desc">Single shot</div></div><div class="menu-item-price">$2.25</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Hot Chocolate</div><div class="menu-item-desc">Mocha + vanilla + cinnamon</div></div><div class="menu-item-price">$5</div></div>
+        </div>
+
+        <!-- ========== SPECIALTY TAB ========== -->
+        <div class="menu-category" id="tab-specialty">
+          <div class="menu-item"><div><div class="menu-item-name">Haus Latte</div><div class="menu-item-desc">Vanilla + brown butter toffee</div></div><div class="menu-item-price">$6.20 / $7.20</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Fresa Blanca</div><div class="menu-item-desc">Strawberry + white mocha</div></div><div class="menu-item-price">$6.30 / $7.30</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Lechera Latte</div><div class="menu-item-desc">Lechera latte + dulce de leche</div></div><div class="menu-item-price">$6 / $7</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Pistacho Cloud</div><div class="menu-item-desc">Salted honey + pistachio foam</div></div><div class="menu-item-price">$6.30 / $7.30</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Blueberry Muffin Matcha</div><div class="menu-item-desc">Blueberry + vanilla foam</div></div><div class="menu-item-price">$8.50</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Matcha Latte</div><div class="menu-item-desc">Ceremonial grade, hot or iced</div></div><div class="menu-item-price">$7.20</div></div>
+        </div>
+
+        <!-- ========== TEA TAB ========== -->
+        <div class="menu-category" id="tab-tea">
+          <div class="menu-item"><div><div class="menu-item-name">Chai Latte</div><div class="menu-item-desc">Spiced chai with steamed milk</div></div><div class="menu-item-price">$6 / $7</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">RX Drink</div><div class="menu-item-desc">Lemon ginger tea + peppermint + honey</div></div><div class="menu-item-price">$4 / $5</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Jamaica Berry</div><div class="menu-item-desc">Hibiscus tea + raspberry syrup + lemonade</div></div><div class="menu-item-price">$4.80 / $5.80</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Cucumber Mint</div><div class="menu-item-desc">Mint tea + cucumber syrup + lemonade</div></div><div class="menu-item-price">$4.80 / $5.80</div></div>
+        </div>
+
+        <!-- ========== TREATS TAB ========== -->
+        <div class="menu-category" id="tab-treats">
+          <div class="menu-item"><div><div class="menu-item-name">Ham &amp; Cheese Croissant</div><div class="menu-item-desc">Savory, flaky, fresh baked</div></div><div class="menu-item-price">$5</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Chocolate Croissant</div><div class="menu-item-desc">Rich chocolate, buttery layers</div></div><div class="menu-item-price">$5</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Butter Croissant</div><div class="menu-item-desc">Classic, golden, flaky</div></div><div class="menu-item-price">$3.20</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Croissant</div><div class="menu-item-desc">Almond or chocolate</div></div><div class="menu-item-price">$4.80</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Danish</div><div class="menu-item-desc">Strawberry, cheese, or cherry</div></div><div class="menu-item-price">—</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Muffin</div><div class="menu-item-desc">Lemon raspberry, chocolate, blueberry, coffee cake</div></div><div class="menu-item-price">$3.20</div></div>
+          <div class="menu-item"><div><div class="menu-item-name">Blueberry Cheesecake Croissant</div><div class="menu-item-desc">Sweet, creamy &amp; flaky</div></div><div class="menu-item-price">$5</div></div>
+        </div>
+
+        <p class="menu-note">Alt milk (oat, soy, almond, coconut) +$0.25 · Cold foam +$0.99 · Extra shot +$1.25 · Syrups +$0.50</p>
+        <p class="menu-note">Syrups: simple, white mocha, dulce de leche, pistachio, irish cream, lavender, brown sugar, vanilla (SF), caramel, honey, french vanilla, hazelnut (SF), cinnamon, cookie butter</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ORDER -->
+  <section class="order" id="order">
+    <div class="order-inner">
+      <p class="section-tag reveal">Skip the Wait</p>
+      <h2 class="reveal">Order Ahead,<br>Pick Up Happy</h2>
+      <p class="reveal">Place your order before you leave the house. DM us on Instagram and we'll have it ready when you walk in.</p>
+      <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="btn-primary dm-btn reveal">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="vertical-align: middle; margin-right: 6px;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        DM Us to Order
+      </a>
+      <p class="reveal" style="margin-top:1rem; font-size:0.75rem; color:var(--charcoal); opacity:0.4;">Online ordering launching soon.</p>
     </div>
   </section>
 
@@ -196,76 +276,6 @@
     </div>
   </section>
 
-  <!-- REVIEWS -->
-  <section class="reviews">
-    <div class="reviews-inner">
-      <p class="section-tag reveal">What People Are Saying</p>
-      <h2 class="reveal">Loved by Oak Cliff</h2>
-      <p class="reviews-rating reveal">★ ★ ★ ★ ★ &nbsp; <a href="https://maps.google.com/?q=Latte+Haus+Dallas+TX" target="_blank">4.9 on Google · 34 Reviews</a></p>
-    </div>
-  </section>
-
-  <!-- MENU -->
-  <section class="menu" id="menu">
-    <div class="menu-inner">
-      <div class="menu-header reveal">
-        <p class="section-tag">The Menu</p>
-        <h2>What We're Pouring</h2>
-        <p>Handcrafted daily. Seasonal specials rotate — follow us on Instagram for the latest.</p>
-      </div>
-      <div class="menu-tabs reveal">
-        <button class="menu-tab active" onclick="switchTab('coffee')">Coffee</button>
-        <button class="menu-tab" onclick="switchTab('specialty')">Specialty</button>
-        <button class="menu-tab" onclick="switchTab('tea')">Tea & More</button>
-        <button class="menu-tab" onclick="switchTab('treats')">Treats</button>
-      </div>
-
-      <!-- ========== COFFEE TAB ========== -->
-      <div class="menu-category active" id="tab-coffee">
-        <div class="menu-item"><div><div class="menu-item-name">Latte</div><div class="menu-item-desc">Espresso + steamed milk · Hot or iced</div></div><div class="menu-item-price">$5.25 / $6.25</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Cappuccino</div><div class="menu-item-desc">Espresso, steamed milk &amp; foam</div></div><div class="menu-item-price">$4.50</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Americano</div><div class="menu-item-desc">Espresso + hot water</div></div><div class="menu-item-price">$4.75</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Macchiato</div><div class="menu-item-desc">Espresso with a touch of foam</div></div><div class="menu-item-price">$3.25</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Cortado</div><div class="menu-item-desc">Equal parts espresso &amp; steamed milk</div></div><div class="menu-item-price">$4</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Drip Coffee</div><div class="menu-item-desc">House blend, freshly brewed</div></div><div class="menu-item-price">$3.50</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Espresso</div><div class="menu-item-desc">Single shot</div></div><div class="menu-item-price">$2.25</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Hot Chocolate</div><div class="menu-item-desc">Mocha + vanilla + cinnamon</div></div><div class="menu-item-price">$5</div></div>
-      </div>
-
-      <!-- ========== SPECIALTY TAB ========== -->
-      <div class="menu-category" id="tab-specialty">
-        <div class="menu-item"><div><div class="menu-item-name">Haus Latte</div><div class="menu-item-desc">Vanilla + brown butter toffee</div></div><div class="menu-item-price">$6.20 / $7.20</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Fresa Blanca</div><div class="menu-item-desc">Strawberry + white mocha</div></div><div class="menu-item-price">$6.30 / $7.30</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Lechera Latte</div><div class="menu-item-desc">Lechera latte + dulce de leche</div></div><div class="menu-item-price">$6 / $7</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Pistacho Cloud</div><div class="menu-item-desc">Salted honey + pistachio foam</div></div><div class="menu-item-price">$6.30 / $7.30</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Blueberry Muffin Matcha</div><div class="menu-item-desc">Blueberry + vanilla foam</div></div><div class="menu-item-price">$8.50</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Matcha Latte</div><div class="menu-item-desc">Ceremonial grade, hot or iced</div></div><div class="menu-item-price">$7.20</div></div>
-      </div>
-
-      <!-- ========== TEA TAB ========== -->
-      <div class="menu-category" id="tab-tea">
-        <div class="menu-item"><div><div class="menu-item-name">Chai Latte</div><div class="menu-item-desc">Spiced chai with steamed milk</div></div><div class="menu-item-price">$6 / $7</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">RX Drink</div><div class="menu-item-desc">Lemon ginger tea + peppermint + honey</div></div><div class="menu-item-price">$4 / $5</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Jamaica Berry</div><div class="menu-item-desc">Hibiscus tea + raspberry syrup + lemonade</div></div><div class="menu-item-price">$4.80 / $5.80</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Cucumber Mint</div><div class="menu-item-desc">Mint tea + cucumber syrup + lemonade</div></div><div class="menu-item-price">$4.80 / $5.80</div></div>
-      </div>
-
-      <!-- ========== TREATS TAB ========== -->
-      <div class="menu-category" id="tab-treats">
-        <div class="menu-item"><div><div class="menu-item-name">Ham &amp; Cheese Croissant</div><div class="menu-item-desc">Savory, flaky, fresh baked</div></div><div class="menu-item-price">$5</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Chocolate Croissant</div><div class="menu-item-desc">Rich chocolate, buttery layers</div></div><div class="menu-item-price">$5</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Butter Croissant</div><div class="menu-item-desc">Classic, golden, flaky</div></div><div class="menu-item-price">$3.20</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Croissant</div><div class="menu-item-desc">Almond or chocolate</div></div><div class="menu-item-price">$4.80</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Danish</div><div class="menu-item-desc">Strawberry, cheese, or cherry</div></div><div class="menu-item-price">—</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Muffin</div><div class="menu-item-desc">Lemon raspberry, chocolate, blueberry, coffee cake</div></div><div class="menu-item-price">$3.20</div></div>
-        <div class="menu-item"><div><div class="menu-item-name">Blueberry Cheesecake Croissant</div><div class="menu-item-desc">Sweet, creamy &amp; flaky</div></div><div class="menu-item-price">$5</div></div>
-      </div>
-
-      <p class="menu-note reveal">Alt milk (oat, soy, almond, coconut) +$0.25 · Cold foam +$0.99 · Extra shot +$1.25 · Syrups +$0.50</p>
-      <p class="menu-note reveal">Syrups: simple, white mocha, dulce de leche, pistachio, irish cream, lavender, brown sugar, vanilla (SF), caramel, honey, french vanilla, hazelnut (SF), cinnamon, cookie butter</p>
-    </div>
-  </section>
-
   <!-- VIBE GALLERY -->
   <div class="photo-strip">
     <img src="images/matcha-black-table.jpg" alt="Matcha latte with flowers on black table at Latte Haus" loading="lazy">
@@ -274,20 +284,6 @@
     <img src="images/latte-art-marble.jpg" alt="Latte art on marble table at Latte Haus" loading="lazy">
     <img src="images/matcha-held-bouquet.jpg" alt="Blueberry matcha held with flower bouquet at Latte Haus" loading="lazy">
   </div>
-
-  <!-- ORDER -->
-  <section class="order" id="order">
-    <div class="order-inner">
-      <p class="section-tag reveal">Skip the Wait</p>
-      <h2 class="reveal">Order Ahead,<br>Pick Up Happy</h2>
-      <p class="reveal">Place your order before you leave the house. DM us on Instagram and we'll have it ready when you walk in.</p>
-      <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="btn-primary dm-btn reveal">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="vertical-align: middle; margin-right: 6px;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        DM Us to Order
-      </a>
-      <p class="reveal" style="margin-top:1rem; font-size:0.75rem; color:var(--charcoal); opacity:0.4;">Online ordering launching soon.</p>
-    </div>
-  </section>
 
   <!-- LOCATION -->
   <section class="location" id="location">
