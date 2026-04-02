@@ -216,7 +216,7 @@ nav.scrolled .mobile-toggle span { background: var(--espresso); }
 
 /* ===== PHOTO STRIP ===== */
 .photo-strip {
-  display: grid; grid-template-columns: repeat(3, 1fr);
+  display: grid; grid-template-columns: repeat(5, 1fr);
   gap: 3px; overflow: hidden;
 }
 .photo-strip img {
@@ -727,6 +727,9 @@ footer {
   justify-content: center; gap: 2rem; transition: right 0.4s ease;
 }
 .mobile-menu.open { right: 0; }
+body.menu-open .mobile-toggle span {
+  background: var(--espresso);
+}
 .mobile-menu a {
   font-family: 'Playfair Display', serif; font-size: 1.8rem;
   text-decoration: none; color: var(--espresso); transition: color 0.3s;
@@ -747,11 +750,14 @@ footer {
   .photo-strip::-webkit-scrollbar { display: none; }
   .photo-strip img { scroll-snap-align: start; aspect-ratio: 4/5; }
   .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .about-image { max-height: 400px; }
+  .about-image img { height: 100%; object-fit: cover; }
   .matcha-menu-inner { grid-template-columns: 1fr; gap: 3rem; }
   .matcha-side { position: static; text-align: center; }
-  .matcha-side .matcha-image { max-width: 500px; margin: 0 auto 2rem; }
-  .matcha-order-btn { display: inline-block; margin-top: 1.5rem; }
+  .matcha-side .matcha-image { max-width: 500px; max-height: 450px; margin: 0 auto 2rem; }
+  .matcha-side .matcha-image img { aspect-ratio: auto; max-height: 450px; }
   .menu-category.active { grid-template-columns: 1fr; }
+  .menu-tab { padding: 0.7rem 1.4rem; min-height: 44px; }
   .order-options { grid-template-columns: 1fr; max-width: 350px; margin-left: auto; margin-right: auto; }
   .reviews-grid { grid-template-columns: 1fr; max-width: 450px; margin-left: auto; margin-right: auto; }
   .location-inner { grid-template-columns: 1fr; gap: 3rem; }
@@ -764,11 +770,14 @@ footer {
   .hero { padding: 5rem 1.5rem 3rem; }
   .hero h1 { font-size: 2.8rem; letter-spacing: -1px; }
   .hero-actions { flex-direction: column; align-items: center; }
-  .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
+  .hero .btn-primary, .hero .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
+  .dm-btn { width: auto !important; max-width: none !important; }
   .about { padding: 5rem 1.5rem; }
   .about-values { flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
   .matcha-menu { padding: 5rem 1.5rem; }
-  .menu-item { padding: 1.3rem 1.5rem; }
+  .menu-item { padding: 1.3rem 1.2rem; }
+  .menu-item-name { font-size: 1rem; }
+  .menu-item-price { font-size: 0.8rem; }
   .order { padding: 5rem 1.5rem; }
   .reviews { padding: 4rem 1.5rem; }
   .location { padding: 5rem 1.5rem; }

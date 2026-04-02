@@ -6,6 +6,7 @@ window.addEventListener('scroll', () => {
 // Mobile menu toggle
 function toggleMobile() {
   document.getElementById('mobileMenu').classList.toggle('open');
+  document.body.classList.toggle('menu-open');
 }
 
 // Menu tab switching
