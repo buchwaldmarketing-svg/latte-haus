@@ -44,10 +44,11 @@ nav.scrolled {
   color: var(--cream); text-decoration: none;
   letter-spacing: -0.5px;
   transition: color 0.4s;
+  display: inline-flex; align-items: center; gap: 0.55rem;
 }
-.nav-logo .logo-icon {
-  display: inline-block; margin-left: 2px;
-  font-size: 0.7rem; vertical-align: super;
+.nav-mascot {
+  width: 26px; height: 26px; flex-shrink: 0;
+  color: currentColor;
 }
 .nav-links {
   display: flex; gap: 2.5rem; list-style: none; align-items: center;
@@ -184,6 +185,106 @@ nav.scrolled .mobile-toggle span { background: var(--espresso); }
 @keyframes bounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ===== STATUS BAR (sticky, appears after hero) ===== */
+.status-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: var(--espresso);
+  color: var(--cream);
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  z-index: 1001;
+  transform: translateY(-100%);
+  transition: transform 0.35s ease;
+  flex-wrap: wrap;
+}
+.status-bar.visible { transform: translateY(0); }
+.status-bar, .status-bar:hover { text-decoration: none; }
+.status-bar:hover .status-address { border-bottom-color: var(--gold); }
+.status-bar .status-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  display: inline-block; flex-shrink: 0;
+  background: #9ca3af;
+}
+.status-bar .status-dot.open {
+  background: #7ECB5F;
+  box-shadow: 0 0 0 3px rgba(126, 203, 95, 0.2);
+}
+.status-bar .status-dot.closed {
+  background: #E15C5C;
+  box-shadow: 0 0 0 3px rgba(225, 92, 92, 0.2);
+}
+.status-bar .status-label { font-weight: 600; }
+.status-bar .status-sep { opacity: 0.4; }
+.status-bar .status-address {
+  color: var(--gold);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+/* Hero status line */
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin: 0 auto 2.5rem;
+  padding: 0.55rem 1.2rem;
+  border: 1px solid rgba(245, 240, 232, 0.25);
+  border-radius: 50px;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.8s;
+  backdrop-filter: blur(4px);
+  background: rgba(44, 24, 16, 0.25);
+  text-decoration: none;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.hero-status:hover {
+  background: rgba(44, 24, 16, 0.4);
+  border-color: rgba(198, 169, 78, 0.6);
+  transform: translateY(-1px);
+}
+.hero-status .hero-status-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #7ECB5F;
+  box-shadow: 0 0 0 3px rgba(126, 203, 95, 0.25);
+  flex-shrink: 0;
+}
+.hero-status.is-closed .hero-status-dot {
+  background: #E15C5C;
+  box-shadow: 0 0 0 3px rgba(225, 92, 92, 0.25);
+}
+.hero-status .hero-status-sep { opacity: 0.4; }
+
+/* Push hero actions animation slightly later so they stagger after status */
+.hero-actions { animation-delay: 1s !important; }
+
+@media (max-width: 600px) {
+  .status-bar {
+    font-size: 0.7rem;
+    padding: 0.45rem 1rem;
+    gap: 0.4rem;
+  }
+  .hero-status {
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 1rem;
+  }
 }
 
 /* ===== PROMO BANNER ===== */
@@ -481,13 +582,16 @@ nav.scrolled .mobile-toggle span { background: var(--espresso); }
 }
 
 /* ===== REVIEWS ===== */
-.reviews { padding: 2.5rem 2rem; background: var(--warm-white); }
+.reviews { background: var(--warm-white); }
+.reviews-compact { padding: 3rem 2rem; }
+.reviews-full { padding: 7rem 2rem; }
 .reviews-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
 .reviews h2 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 4vw, 2.8rem);
   margin-bottom: 0.5rem; letter-spacing: -1px;
 }
+.reviews-full h2 { margin-bottom: 3rem; }
 .reviews-rating {
   font-size: 0.85rem; color: var(--gold); margin-bottom: 0; letter-spacing: 3px;
 }

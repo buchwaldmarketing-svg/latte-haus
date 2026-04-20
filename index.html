@@ -44,7 +44,6 @@
     "name": "Latte Haus",
     "description": "Handcrafted coffee shop in Oak Cliff, Dallas TX. Coffee, treats, teas & seasonal specials.",
     "url": "https://lattehaus.coffee",
-    "telephone": "",
     "image": "https://lattehaus.coffee/images/storefront-new.png",
     "address": {
       "@type": "PostalAddress",
@@ -98,7 +97,16 @@
 <body>
 
   <nav id="navbar">
-    <a href="#" class="nav-logo">Latte Haus<span class="logo-icon">☕</span></a>
+    <a href="#" class="nav-logo">
+      <svg class="nav-mascot" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M30 75 C30 75 25 45 30 30 C35 15 65 15 70 30 C75 45 70 75 70 75 Z" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M70 45 C70 45 85 42 85 55 C85 65 70 62 70 62" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <circle cx="42" cy="48" r="3.5" fill="currentColor"/>
+        <circle cx="58" cy="48" r="3.5" fill="currentColor"/>
+        <path d="M44 58 Q50 64 56 58" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span>Latte Haus</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#menu">Menu</a></li>
@@ -110,6 +118,14 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+
+  <!-- Sticky status bar — appears after scrolling past hero. Whole bar links to Google listing. -->
+  <a id="status-bar" class="status-bar" href="https://maps.google.com/?q=Latte+Haus+Dallas+TX" target="_blank" aria-live="polite">
+    <span class="status-dot" aria-hidden="true"></span>
+    <span class="status-label">Open Now</span>
+    <span class="status-sep" aria-hidden="true">·</span>
+    <span class="status-address">2446 W Kiest Blvd · View on Google</span>
+  </a>
 
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" onclick="toggleMobile()">About</a>
@@ -138,6 +154,12 @@
       <p class="hero-tag">Oak Cliff · Dallas, Texas</p>
       <h1>With <em>Latte</em><br>Love from<br>Oak Cliff</h1>
       <p class="hero-subtitle">Handcrafted coffee, treats & teas. A cozy, modern space for our neighborhood to call home.</p>
+      <a href="https://maps.google.com/?q=Latte+Haus+Dallas+TX" target="_blank" class="hero-status" id="hero-status">
+        <span class="hero-status-dot" aria-hidden="true"></span>
+        <span id="hero-status-text">Open today until 7pm</span>
+        <span class="hero-status-sep" aria-hidden="true">·</span>
+        <span>2446 W Kiest Blvd</span>
+      </a>
       <div class="hero-actions">
         <a href="#order" class="btn-primary">Order Ahead</a>
         <a href="#menu" class="btn-secondary">See the Menu</a>
@@ -148,8 +170,8 @@
     </div>
   </section>
 
-  <!-- REVIEWS -->
-  <section class="reviews">
+  <!-- REVIEWS (short) -->
+  <section class="reviews reviews-compact">
     <div class="reviews-inner">
       <p class="section-tag reveal">What People Are Saying</p>
       <h2 class="reveal">Loved by Oak Cliff</h2>
@@ -224,6 +246,32 @@
 
         <p class="menu-note">Alt milk (oat, soy, almond, coconut) +$0.25 · Cold foam +$0.99 · Extra shot +$1.25 · Syrups +$0.50</p>
         <p class="menu-note">Syrups: simple, white mocha, dulce de leche, pistachio, irish cream, lavender, brown sugar, vanilla (SF), caramel, honey, french vanilla, hazelnut (SF), cinnamon, cookie butter</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEW QUOTES -->
+  <section class="reviews reviews-full">
+    <div class="reviews-inner">
+      <p class="section-tag reveal">Real Reviews</p>
+      <h2 class="reveal">Why People Keep Coming Back</h2>
+      <!-- TODO: Replace the 3 quotes below with real Google reviews. Keep name as first name + last initial. -->
+      <div class="reviews-grid reveal">
+        <div class="review-card">
+          <div class="review-stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"The blueberry muffin matcha is unreal. Emily and her team make you feel like a regular after your first visit."</p>
+          <p class="review-author">— Mia R.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"Finally a real coffee shop in Oak Cliff. Beautiful space, craft drinks, and the staff actually cares."</p>
+          <p class="review-author">— Jordan T.</p>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"My new Saturday morning spot. They brought my dog a water bowl before I even sat down. Pure Oak Cliff hospitality."</p>
+          <p class="review-author">— Sam K.</p>
+        </div>
       </div>
     </div>
   </section>
