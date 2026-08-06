@@ -100,7 +100,7 @@ nav.scrolled .mobile-toggle span { background: var(--espresso); }
   justify-content: center; text-align: center;
   padding: 6rem 2rem 4rem; position: relative;
   background: linear-gradient(rgba(44, 24, 16, 0.68), rgba(44, 24, 16, 0.72)),
-              url('images/storefront-new.png') center/cover no-repeat;
+              url('images/storefront-new.jpg') center/cover no-repeat;
   overflow: hidden;
 }
 .hero-content { position: relative; z-index: 2; max-width: 750px; }

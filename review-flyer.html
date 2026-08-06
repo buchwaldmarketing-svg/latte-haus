@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latte Haus — Leave a Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page {
+      size: 5in 7in;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #e8e4dc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .flyer {
+      width: 5in;
+      height: 7in;
+      background: #F5F0E8;
+      border-radius: 20px;
+      padding: 2.2rem 2rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(44, 24, 16, 0.15);
+      gap: 0;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #2C1810;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.25rem;
+    }
+
+    .logo-icon {
+      font-size: 0.6rem;
+      vertical-align: super;
+      margin-left: 2px;
+    }
+
+    .tagline {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.72rem;
+      color: #6B4226;
+      margin-bottom: 1.6rem;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1.5px;
+      background: #C6A94E;
+      margin: 0 auto 1.6rem;
+    }
+
+    .stars {
+      font-size: 1.5rem;
+      letter-spacing: 6px;
+      color: #C6A94E;
+      margin-bottom: 0.8rem;
+    }
+
+    .heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #2C1810;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .heading em {
+      color: #C6A94E;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .subtext {
+      font-size: 0.7rem;
+      color: #3A3A3A;
+      font-weight: 300;
+      line-height: 1.7;
+      max-width: 270px;
+      margin: 0 auto 1.6rem;
+    }
+
+    .qr-wrapper {
+      background: white;
+      padding: 12px;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(44, 24, 16, 0.08);
+      margin: 0 auto 0.8rem;
+    }
+
+    .qr-wrapper img {
+      width: 130px;
+      height: 130px;
+      display: block;
+    }
+
+    .scan-text {
+      font-size: 0.6rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #6B4226;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .scan-subtext {
+      font-size: 0.56rem;
+      color: #3A3A3A;
+      opacity: 0.4;
+      font-weight: 300;
+      margin-bottom: 1.6rem;
+    }
+
+    .footer-line {
+      width: 40px;
+      height: 1.5px;
+      background: #C6A94E;
+      margin: 0 auto 0.7rem;
+    }
+
+    .footer-address {
+      font-size: 0.55rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6B4226;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-socials {
+      font-size: 0.55rem;
+      color: #3A3A3A;
+      opacity: 0.4;
+      font-weight: 300;
+    }
+
+    /* Corner accents */
+    .corner {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 1.5px solid rgba(198, 169, 78, 0.2);
+    }
+    .corner-tl { top: 14px; left: 14px; border-right: none; border-bottom: none; border-radius: 6px 0 0 0; }
+    .corner-tr { top: 14px; right: 14px; border-left: none; border-bottom: none; border-radius: 0 6px 0 0; }
+    .corner-bl { bottom: 14px; left: 14px; border-right: none; border-top: none; border-radius: 0 0 0 6px; }
+    .corner-br { bottom: 14px; right: 14px; border-left: none; border-top: none; border-radius: 0 0 6px 0; }
+
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+        min-height: auto;
+      }
+      .flyer {
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flyer">
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+
+    <div class="logo">Latte Haus<span class="logo-icon">☕</span></div>
+    <div class="tagline">With Latte Love from Oak Cliff</div>
+    <div class="divider"></div>
+    <div class="stars">★ ★ ★ ★ ★</div>
+    <h1 class="heading">Loved Your<br><em>Latte?</em></h1>
+    <p class="subtext">We'd love to hear about it. A quick Google review helps our small business more than you know — and helps your neighbors find their next favorite drink.</p>
+    <div class="qr-wrapper">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2FLatte%2BHaus%2B2446%2BW%2BKiest%2BBlvd%2BDallas%2BTX%2B75233&format=png&color=2C1810&bgcolor=FFFFFF&qzone=2" alt="Scan to leave a Google review for Latte Haus">
+    </div>
+    <div class="scan-text">Scan to Review</div>
+    <div class="scan-subtext">Opens Latte Haus on Google Maps</div>
+    <div class="footer-line"></div>
+    <div class="footer-address">2446 W Kiest Blvd · Dallas, TX 75233</div>
+    <div class="footer-socials">@lattehauscoffee</div>
+  </div>
+</body>
+</html>
