@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Latte Haus — Mock 2 Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Karla:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: oklch(0.965 0.018 84);
+      --cream-deep: oklch(0.93 0.03 80);
+      --espresso: oklch(0.28 0.035 55);
+      --espresso-deep: oklch(0.22 0.03 55);
+      --terracotta: oklch(0.6 0.14 42);
+      --terracotta-deep: oklch(0.52 0.14 40);
+      --matcha: oklch(0.55 0.09 135);
+      --whip: oklch(0.99 0.008 84);
+      --display: 'Shrikhand', serif;
+      --body: 'Karla', sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+    body {
+      font-family: var(--body);
+      background: var(--cream);
+      color: var(--espresso);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+
+    /* ---------- status ribbon ---------- */
+    .ribbon {
+      background: var(--espresso);
+      color: var(--cream);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0.5rem 1rem;
+    }
+    .ribbon .dot { color: oklch(0.75 0.16 140); }
+    .ribbon .closed-dot { color: oklch(0.65 0.18 25); }
+
+    /* ---------- nav ---------- */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.9rem clamp(1rem, 4vw, 3rem);
+      background: var(--cream);
+      border-bottom: 2px solid var(--espresso);
+    }
+    .wordmark { font-family: var(--display); font-size: 1.5rem; text-decoration: none; line-height: 1; }
+    .nav-links { display: flex; gap: clamp(0.9rem, 2.5vw, 2rem); align-items: center; }
+    .nav-links a {
+      text-decoration: none; font-weight: 800; font-size: 0.82rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .nav-links a.order-pill {
+      background: var(--terracotta); color: var(--whip);
+      padding: 0.55rem 1.1rem; border-radius: 99px;
+    }
+    .nav-links a:not(.order-pill) { display: none; }
+    @media (min-width: 720px) { .nav-links a:not(.order-pill) { display: inline; } }
+
+    /* ---------- hero ---------- */
+    .hero { background: var(--terracotta); color: var(--whip); }
+    .hero-inner {
+      display: grid; grid-template-columns: 1fr;
+      max-width: 1300px; margin: 0 auto;
+    }
+    .hero-copy { padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 4vw, 3rem) clamp(2rem, 4vw, 4rem); }
+    .hero-kicker {
+      font-weight: 800; font-size: 0.85rem; letter-spacing: 0.18em;
+      text-transform: uppercase; margin-bottom: 1rem;
+      color: oklch(0.9 0.05 84);
+    }
+    h1 {
+      font-family: var(--display);
+      font-size: clamp(2.6rem, 8.5vw, 5.6rem);
+      line-height: 1.02;
+      font-weight: 400;
+      text-wrap: balance;
+    }
+    .hero-copy p.sub {
+      margin-top: 1.4rem; font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 42ch; color: oklch(0.94 0.03 84);
+    }
+    .hero-ctas { margin-top: 2rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 800;
+      font-size: 0.9rem; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.9rem 1.6rem; border-radius: 99px;
+    }
+    .btn-light { background: var(--whip); color: var(--terracotta-deep); }
+    .btn-ghost { border: 2px solid var(--whip); color: var(--whip); }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
+    @media (min-width: 900px) {
+      .hero-inner { grid-template-columns: 1.05fr 1fr; align-items: stretch; }
+      .hero-copy { align-self: center; }
+      .hero-photo img { aspect-ratio: auto; min-height: 560px; }
+    }
+
+    /* ---------- ticker ---------- */
+    .ticker {
+      background: var(--espresso); color: var(--cream);
+      overflow: hidden; white-space: nowrap;
+      border-top: 2px solid var(--espresso-deep);
+      padding: 0.65rem 0;
+    }
+    .ticker-track {
+      display: inline-block;
+      animation: tick 28s linear infinite;
+      font-family: var(--display); font-size: 1rem; letter-spacing: 0.04em;
+    }
+    .ticker-track span { margin: 0 1.2rem; }
+    @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+
+    /* ---------- new drops ---------- */
+    .drops { max-width: 1300px; margin: 0 auto; padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 3rem); }
+    .section-kicker {
+      font-weight: 800; font-size: 0.8rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--terracotta);
+    }
+    h2 {
+      font-family: var(--display); font-weight: 400;
+      font-size: clamp(2rem, 5.5vw, 3.6rem); line-height: 1.05;
+      margin-top: 0.4rem;
+    }
+    .drops-grid { display: grid; gap: clamp(1.5rem, 4vw, 3.5rem); margin-top: 2.5rem; }
+    .drop { display: grid; gap: 1.2rem; align-content: start; }
+    .drop img { border-radius: 14px; aspect-ratio: 4/5; object-fit: cover; }
+    .drop-num {
+      font-family: var(--display); color: var(--terracotta);
+      font-size: 1.1rem;
+    }
+    .drop h3 { font-size: 1.5rem; font-weight: 800; line-height: 1.15; margin-top: 0.2rem; }
+    .drop p { margin-top: 0.4rem; max-width: 46ch; }
+    .drop .price { font-weight: 800; color: var(--terracotta-deep); margin-top: 0.5rem; }
+    @media (min-width: 800px) {
+      .drops-grid { grid-template-columns: 1fr 1fr; }
+      .drop:nth-child(2) { transform: translateY(3rem); }
+    }
+
+    /* ---------- menu ---------- */
+    .menu { background: var(--espresso); color: var(--cream); }
+    .menu-inner { max-width: 1300px; margin: 0 auto; padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 3rem); }
+    .menu .section-kicker { color: oklch(0.78 0.1 60); }
+    .menu h2 { color: var(--whip); }
+    .menu-note-top { margin-top: 0.8rem; color: oklch(0.85 0.03 70); max-width: 60ch; }
+    .menu-cols { display: grid; gap: clamp(2.2rem, 5vw, 4rem); margin-top: 3rem; }
+    @media (min-width: 800px) { .menu-cols { grid-template-columns: 1fr 1fr; } }
+    .menu-cat h3 {
+      font-family: var(--display); font-weight: 400; font-size: 1.6rem;
+      color: oklch(0.83 0.1 55);
+      border-bottom: 2px solid oklch(0.4 0.03 55);
+      padding-bottom: 0.5rem; margin-bottom: 1.1rem;
+    }
+    .mi { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.45rem 0; }
+    .mi .n { font-weight: 800; font-size: 1.02rem; white-space: nowrap; }
+    .mi .leader { flex: 1; border-bottom: 2px dotted oklch(0.45 0.03 55); transform: translateY(-4px); min-width: 1.5rem; }
+    .mi .p { font-weight: 800; white-space: nowrap; color: oklch(0.85 0.09 60); }
+    .mi-desc { font-size: 0.86rem; color: oklch(0.8 0.03 70); margin: -0.3rem 0 0.3rem; max-width: 52ch; }
+    .menu-footnote { margin-top: 2.5rem; font-size: 0.86rem; color: oklch(0.8 0.03 70); max-width: 75ch; }
+
+    /* ---------- gallery ---------- */
+    .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1; }
+    .gallery img:first-child { grid-column: span 2; aspect-ratio: 2/1; }
+    @media (min-width: 800px) {
+      .gallery { grid-template-columns: repeat(4, 1fr); }
+      .gallery img:first-child { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+    }
+
+    /* ---------- story ---------- */
+    .story-wrap { background: var(--cream-deep); }
+    .story {
+      max-width: 1300px; margin: 0 auto;
+      padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 3rem);
+      display: grid; gap: 2.5rem;
+    }
+    .story p { max-width: 62ch; margin-top: 1.1rem; font-size: 1.05rem; }
+    .story-facts { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.6rem; }
+    .fact {
+      border: 2px solid var(--espresso); border-radius: 99px;
+      padding: 0.45rem 1rem; font-weight: 800; font-size: 0.82rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .story img { border-radius: 14px; }
+    @media (min-width: 900px) {
+      .story { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+    }
+
+    /* ---------- reviews ---------- */
+    .reviews { max-width: 1100px; margin: 0 auto; padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 3rem); text-align: center; }
+    .stars { color: var(--terracotta); font-size: 1.3rem; letter-spacing: 0.2em; }
+    blockquote.big {
+      font-family: var(--display); font-weight: 400;
+      font-size: clamp(1.4rem, 3.6vw, 2.4rem); line-height: 1.25;
+      margin-top: 1.2rem; text-wrap: balance;
+    }
+    .review-row { display: grid; gap: 2rem; margin-top: 3rem; text-align: left; }
+    @media (min-width: 720px) { .review-row { grid-template-columns: 1fr 1fr; } }
+    .review-row blockquote { font-style: italic; color: oklch(0.4 0.03 55); }
+    .review-row cite { display: block; font-style: normal; font-weight: 800; margin-top: 0.6rem; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .gbadge { margin-top: 2.5rem; font-weight: 800; font-size: 0.9rem; }
+
+    /* ---------- visit ---------- */
+    .visit { background: var(--terracotta); color: var(--whip); }
+    .visit-inner {
+      max-width: 1300px; margin: 0 auto;
+      padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 3rem);
+      display: grid; gap: 2.5rem;
+    }
+    @media (min-width: 900px) { .visit-inner { grid-template-columns: 1fr 1fr; } }
+    .visit .section-kicker { color: oklch(0.92 0.05 84); }
+    .visit h2 { color: var(--whip); }
+    .visit address { font-style: normal; font-size: 1.1rem; margin-top: 1rem; }
+    .hours { margin-top: 1.6rem; width: 100%; max-width: 24rem; border-collapse: collapse; }
+    .hours td { padding: 0.4rem 0; border-bottom: 1px solid oklch(0.68 0.12 42); font-weight: 500; }
+    .hours td:last-child { text-align: right; font-weight: 800; }
+    .visit iframe { width: 100%; height: 100%; min-height: 320px; border: 0; border-radius: 14px; }
+    .visit .btn-light { margin-top: 1.8rem; }
+
+    /* ---------- footer ---------- */
+    footer {
+      background: var(--espresso-deep); color: var(--cream);
+      text-align: center; padding: 2.5rem 1.25rem;
+    }
+    footer .wordmark { font-size: 2rem; }
+    footer p { font-size: 0.85rem; margin-top: 0.8rem; color: oklch(0.75 0.03 70); }
+    footer a { font-weight: 800; }
+  </style>
+</head>
+<body>
+
+  <div class="ribbon" id="status-ribbon">☕ With Latte Love from Oak Cliff</div>
+
+  <nav>
+    <a class="wordmark" href="#top">Latte Haus</a>
+    <div class="nav-links">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="#visit">Visit</a>
+      <a class="order-pill" href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener">DM to Order</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-kicker">Oak Cliff · Dallas, TX</p>
+        <h1>Handcrafted coffee, with latte love.</h1>
+        <p class="sub">Horchata lattes, ceremonial matcha, and fresh-baked croissants in a cozy corner of Kiestwood Village. Come as you are, dogs welcome.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-light" href="#menu">See the Menu</a>
+          <a class="btn btn-ghost" href="#visit">Find Us</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="images/horchata-matcha-pair-wall.jpg" alt="Horchata Latte and matcha Horchata Latte, cinnamon-dusted, held up against the white brick outside Latte Haus">
+      </div>
+    </div>
+  </header>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker-track">
+      <span>Horchata Latte</span><span>✿</span><span>Fruity Pebbles Latte</span><span>✿</span><span>Fresa Blanca</span><span>✿</span><span>Pistachio Cloud</span><span>✿</span><span>Blueberry Muffin Matcha</span><span>✿</span><span>Lechera Latte</span><span>✿</span><span>Honeycomb</span><span>✿</span><span>Jamaica Berry</span><span>✿</span>
+    </div>
+  </div>
+
+  <section class="drops">
+    <p class="section-kicker">New This Season</p>
+    <h2>The new drops</h2>
+    <div class="drops-grid">
+      <div class="drop">
+        <img src="images/fruity-pebbles-pair.jpg" alt="Fruity Pebbles Lattes, matcha and coffee, piled with whipped cream and cereal">
+        <div>
+          <p class="drop-num">No. 1</p>
+          <h3>Fruity Pebbles Latte</h3>
+          <p>Saturday-morning cartoons in a cup. Whipped cream, a pile of Fruity Pebbles, and your choice of matcha or coffee underneath.</p>
+          <p class="price">$6.25 / $7.25</p>
+        </div>
+      </div>
+      <div class="drop">
+        <img src="images/horchata-cinnamon-sprinkle.jpg" alt="Cinnamon being shaken over a pair of Horchata Lattes with cinnamon-stick garnish">
+        <div>
+          <p class="drop-num">No. 2</p>
+          <h3>Horchata Latte</h3>
+          <p>The one Oak Cliff was made for. Cinnamon-kissed horchata over espresso or matcha, finished with a cinnamon stick.</p>
+          <p class="price">$6.30 / $7.30</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="menu-inner">
+      <p class="section-kicker">The Menu</p>
+      <h2>What we're pouring</h2>
+      <p class="menu-note-top">Handcrafted daily. Hot / iced pricing where it applies. Seasonal specials rotate, so follow <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener">@lattehauscoffee</a> for the latest.</p>
+      <div class="menu-cols">
+        <div>
+          <div class="menu-cat">
+            <h3>Lattes</h3>
+            <div class="mi"><span class="n">Haus Latte</span><span class="leader"></span><span class="p">6.20 / 7.20</span></div>
+            <p class="mi-desc">Vanilla + brown butter toffee cold foam + cookie crumbs</p>
+            <div class="mi"><span class="n">Fruity Pebbles Latte</span><span class="leader"></span><span class="p">6.25 / 7.25</span></div>
+            <p class="mi-desc">Matcha or coffee</p>
+            <div class="mi"><span class="n">Horchata Latte</span><span class="leader"></span><span class="p">6.30 / 7.30</span></div>
+            <p class="mi-desc">Matcha or coffee</p>
+            <div class="mi"><span class="n">Fresa Blanca</span><span class="leader"></span><span class="p">6.25 / 7.25</span></div>
+            <p class="mi-desc">Strawberry + white mocha + strawberry cold foam</p>
+            <div class="mi"><span class="n">Pistachio Cloud</span><span class="leader"></span><span class="p">6.20 / 7.20</span></div>
+            <p class="mi-desc">Salted honey + pistachio cold foam</p>
+            <div class="mi"><span class="n">Lechera Latte</span><span class="leader"></span><span class="p">5.80 / 6.80</span></div>
+            <p class="mi-desc">Matcha or coffee</p>
+            <div class="mi"><span class="n">Honeycomb</span><span class="leader"></span><span class="p">5.80 / 6.80</span></div>
+            <p class="mi-desc">Salted honey + caramel</p>
+            <div class="mi"><span class="n">Blueberry Muffin Matcha</span><span class="leader"></span><span class="p">7.50</span></div>
+            <p class="mi-desc">Blueberry puree + cold foam + muffin crumbs</p>
+            <div class="mi"><span class="n">Strawberry Matcha</span><span class="leader"></span><span class="p">7.20</span></div>
+            <div class="mi"><span class="n">Banana Matcha</span><span class="leader"></span><span class="p">7.20</span></div>
+            <div class="mi"><span class="n">Matcha Latte</span><span class="leader"></span><span class="p">7.20</span></div>
+            <p class="mi-desc">Ceremonial grade, hot or iced</p>
+          </div>
+        </div>
+        <div>
+          <div class="menu-cat">
+            <h3>Coffee</h3>
+            <div class="mi"><span class="n">Latte</span><span class="leader"></span><span class="p">5.25 / 6.25</span></div>
+            <div class="mi"><span class="n">Americano</span><span class="leader"></span><span class="p">4.75</span></div>
+            <div class="mi"><span class="n">Cappuccino</span><span class="leader"></span><span class="p">4.50</span></div>
+            <div class="mi"><span class="n">Cortado</span><span class="leader"></span><span class="p">4</span></div>
+            <div class="mi"><span class="n">Drip Coffee</span><span class="leader"></span><span class="p">3.50</span></div>
+            <div class="mi"><span class="n">Macchiato</span><span class="leader"></span><span class="p">3.25</span></div>
+            <div class="mi"><span class="n">Espresso</span><span class="leader"></span><span class="p">2.25</span></div>
+          </div>
+          <div class="menu-cat" style="margin-top:2.2rem;">
+            <h3>Drinks</h3>
+            <div class="mi"><span class="n">Dirty Chai</span><span class="leader"></span><span class="p">6.20 / 7.20</span></div>
+            <p class="mi-desc">Minor Figures chai + espresso</p>
+            <div class="mi"><span class="n">Chai Latte</span><span class="leader"></span><span class="p">5.20 / 6.20</span></div>
+            <div class="mi"><span class="n">Strawberry Acai</span><span class="leader"></span><span class="p">4 / 5</span></div>
+            <div class="mi"><span class="n">Jamaica Berry</span><span class="leader"></span><span class="p">4 / 5</span></div>
+            <div class="mi"><span class="n">Cucumber Mint</span><span class="leader"></span><span class="p">4 / 5</span></div>
+            <div class="mi"><span class="n">Hot Chocolate</span><span class="leader"></span><span class="p">4 / 5</span></div>
+            <div class="mi"><span class="n">RX Drink</span><span class="leader"></span><span class="p">3 / 4</span></div>
+            <p class="mi-desc">Lemon ginger tea + peppermint + honey</p>
+            <div class="mi"><span class="n">London Fog</span><span class="leader"></span><span class="p">—</span></div>
+            <p class="mi-desc">Earl grey tea + milk + vanilla/lavender</p>
+          </div>
+          <div class="menu-cat" style="margin-top:2.2rem;">
+            <h3>Sweets</h3>
+            <div class="mi"><span class="n">Ham &amp; Cheese Croissant</span><span class="leader"></span><span class="p">5</span></div>
+            <div class="mi"><span class="n">Chocolate Croissant</span><span class="leader"></span><span class="p">5</span></div>
+            <div class="mi"><span class="n">Cinnamon Crunch Croissant</span><span class="leader"></span><span class="p">4</span></div>
+            <div class="mi"><span class="n">Blueberry Cheesecake Croissant</span><span class="leader"></span><span class="p">4</span></div>
+            <div class="mi"><span class="n">Danish</span><span class="leader"></span><span class="p">4</span></div>
+            <div class="mi"><span class="n">Muffin</span><span class="leader"></span><span class="p">4</span></div>
+            <div class="mi"><span class="n">Butter Croissant</span><span class="leader"></span><span class="p">3</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="menu-footnote">Alt milk (oat, soy, almond, coconut) +$0.25 · Cold foam +$0.50 · Extra shot +$1.00 · Syrups +$0.50: simple, white mocha, dulce de leche, pistachio, irish cream, lavender, brown sugar, vanilla (SF), caramel, honey, french vanilla, hazelnut (SF), cinnamon, cookie butter, banana</p>
+    </div>
+  </section>
+
+  <div class="gallery">
+    <img src="images/interior-lounge.jpg" alt="The lounge at Latte Haus, warm light and cozy seating" loading="lazy">
+    <img src="images/fruity-pebbles-duo.jpg" alt="Fruity Pebbles Lattes topped with whipped cream and cereal" loading="lazy">
+    <img src="images/latte-art-marble.jpg" alt="Latte art on the marble counter" loading="lazy">
+    <img src="images/wall-sign-interior.jpg" alt="With Latte Love from Oak Cliff sign above the pink velvet chairs" loading="lazy">
+    <img src="images/blueberry-matcha-hero.jpg" alt="Blueberry Muffin Matcha, layered blueberry and vanilla foam" loading="lazy">
+  </div>
+
+  <div class="story-wrap">
+    <section class="story" id="story">
+      <div>
+        <p class="section-kicker">Our Story</p>
+        <h2>Brewing something special for Oak Cliff</h2>
+        <p>Latte Haus was born from a simple idea: that Oak Cliff deserves a coffee shop where everyone feels like family. Founded by Emily, a passionate young entrepreneur, we opened our doors on W Kiest Blvd to bring handcrafted drinks, warm energy, and a beautifully designed space to the neighborhood.</p>
+        <p>We're not just making coffee. We're building community, one cup at a time.</p>
+        <div class="story-facts">
+          <span class="fact">Community First</span>
+          <span class="fact">Handcrafted</span>
+          <span class="fact">Dogs Welcome</span>
+        </div>
+      </div>
+      <img src="images/mirror-mascot.jpg" alt="The Latte Haus mascot in the shop mirror" loading="lazy">
+    </section>
+  </div>
+
+  <section class="reviews">
+    <p class="stars" aria-label="5 stars">★★★★★</p>
+    <blockquote class="big">"The owner, Emily, was the sweetest, most bubbly young entrepreneur. Definitely will be coming back."</blockquote>
+    <div class="review-row">
+      <div>
+        <blockquote>"My husband and I are very picky when it comes to our coffee and they meet our expectations!!!"</blockquote>
+        <cite>Google review</cite>
+      </div>
+      <div>
+        <blockquote>"Super friendly staff that treat their customers like family. The baristas made my day a lot better."</blockquote>
+        <cite>Google review</cite>
+      </div>
+    </div>
+    <p class="gbadge">4.9 ★ on Google</p>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="visit-inner">
+      <div>
+        <p class="section-kicker">Visit</p>
+        <h2>Kiestwood Village</h2>
+        <address>2446 W Kiest Blvd<br>Dallas, TX 75233</address>
+        <table class="hours">
+          <tr><td>Monday – Friday</td><td>7 AM – 7 PM</td></tr>
+          <tr><td>Saturday</td><td>8 AM – 4 PM</td></tr>
+          <tr><td>Sunday</td><td>8 AM – 11 AM</td></tr>
+        </table>
+        <a class="btn btn-light" href="https://maps.google.com/?q=Latte+Haus+2446+W+Kiest+Blvd+Dallas+TX+75233" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <iframe title="Map to Latte Haus" src="https://www.google.com/maps?q=Latte+Haus,+2446+W+Kiest+Blvd,+Dallas,+TX+75233&output=embed" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <span class="wordmark">Latte Haus</span>
+    <p>DM <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener">@lattehauscoffee</a> to order · Online ordering launching soon</p>
+    <p>© 2026 Latte Haus · With Latte Love from Oak Cliff</p>
+  </footer>
+
+  <script>
+    // Open/closed status, always America/Chicago (shop time), never the visitor's clock
+    (function () {
+      const now = new Date();
+      const chicago = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Chicago', hour12: false, weekday: 'short', hour: 'numeric', minute: 'numeric'
+      }).formatToParts(now).reduce((acc, p) => (acc[p.type] = p.value, acc), {});
+      const mins = parseInt(chicago.hour, 10) * 60 + parseInt(chicago.minute, 10);
+      const day = chicago.weekday;
+      const windows = { Mon: [420, 1140], Tue: [420, 1140], Wed: [420, 1140], Thu: [420, 1140], Fri: [420, 1140], Sat: [480, 960], Sun: [480, 660] };
+      const w = windows[day];
+      const open = w && mins >= w[0] && mins < w[1];
+      const fmt = m => {
+        const h = Math.floor(m / 60), min = m % 60;
+        const h12 = ((h + 11) % 12) + 1;
+        return h12 + (min ? ':' + String(min).padStart(2, '0') : '') + (h < 12 ? 'am' : 'pm');
+      };
+      const el = document.getElementById('status-ribbon');
+      el.innerHTML = open
+        ? '<span class="dot">●</span>&nbsp; Open now · until ' + fmt(w[1]) + ' &nbsp;·&nbsp; 2446 W Kiest Blvd'
+        : '<span class="closed-dot">●</span>&nbsp; Closed now · see hours below &nbsp;·&nbsp; 2446 W Kiest Blvd';
+    })();
+    // Seamless ticker: duplicate content once
+    const t = document.getElementById('ticker-track');
+    t.innerHTML += t.innerHTML;
+  </script>
+</body>
+</html>
