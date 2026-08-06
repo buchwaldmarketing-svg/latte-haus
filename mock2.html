@@ -69,27 +69,40 @@
     @media (min-width: 720px) { .nav-links a:not(.order-pill) { display: inline; } }
 
     /* ---------- hero ---------- */
-    .hero { background: var(--terracotta); color: var(--whip); }
-    .hero-inner {
-      display: grid; grid-template-columns: 1fr;
-      max-width: 1300px; margin: 0 auto;
+    .hero {
+      position: relative; color: var(--whip);
+      min-height: clamp(540px, 88vh, 820px);
+      display: flex; align-items: flex-end;
     }
-    .hero-copy { padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 4vw, 3rem) clamp(2rem, 4vw, 4rem); }
+    .hero-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 38%;
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, oklch(0.2 0.03 55 / 0.88) 0%, oklch(0.2 0.03 55 / 0.35) 45%, transparent 72%);
+    }
+    .hero-copy {
+      position: relative; z-index: 1; width: 100%;
+      max-width: 1300px; margin: 0 auto;
+      padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 4vw, 3rem) clamp(2.2rem, 5vw, 4rem);
+    }
     .hero-kicker {
       font-weight: 800; font-size: 0.85rem; letter-spacing: 0.18em;
       text-transform: uppercase; margin-bottom: 1rem;
-      color: oklch(0.9 0.05 84);
+      color: oklch(0.93 0.03 84);
     }
     h1 {
       font-family: var(--display);
-      font-size: clamp(2.6rem, 8.5vw, 5.6rem);
+      font-size: clamp(2.6rem, 8vw, 5.4rem);
       line-height: 1.02;
       font-weight: 400;
       text-wrap: balance;
+      max-width: 14ch;
     }
     .hero-copy p.sub {
       margin-top: 1.4rem; font-size: clamp(1rem, 2vw, 1.2rem);
-      max-width: 42ch; color: oklch(0.94 0.03 84);
+      max-width: 42ch; color: oklch(0.95 0.02 84);
     }
     .hero-ctas { margin-top: 2rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
     .btn {
@@ -99,12 +112,6 @@
     }
     .btn-light { background: var(--whip); color: var(--terracotta-deep); }
     .btn-ghost { border: 2px solid var(--whip); color: var(--whip); }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
-    @media (min-width: 900px) {
-      .hero-inner { grid-template-columns: 1.05fr 1fr; align-items: stretch; }
-      .hero-copy { align-self: center; }
-      .hero-photo img { aspect-ratio: auto; min-height: 560px; }
-    }
 
     /* ---------- ticker ---------- */
     .ticker {
@@ -253,18 +260,14 @@
   </nav>
 
   <header class="hero" id="top">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <p class="hero-kicker">Oak Cliff · Dallas, TX</p>
-        <h1>Handcrafted coffee, with latte love.</h1>
-        <p class="sub">Horchata lattes, ceremonial matcha, and fresh-baked croissants in a cozy corner of Kiestwood Village. Come as you are, dogs welcome.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-light" href="#menu">See the Menu</a>
-          <a class="btn btn-ghost" href="#visit">Find Us</a>
-        </div>
-      </div>
-      <div class="hero-photo">
-        <img src="images/horchata-matcha-pair-wall.jpg" alt="Horchata Latte and matcha Horchata Latte, cinnamon-dusted, held up against the white brick outside Latte Haus">
+    <img class="hero-img" src="images/hero-brick.jpg" alt="Horchata Latte and matcha Horchata Latte, cinnamon-dusted, held up against the white brick outside Latte Haus">
+    <div class="hero-copy">
+      <p class="hero-kicker">Oak Cliff · Dallas, TX</p>
+      <h1>Handcrafted coffee, with latte love.</h1>
+      <p class="sub">Horchata lattes, ceremonial matcha, and fresh-baked croissants in a cozy corner of Kiestwood Village. Come as you are, dogs welcome.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-light" href="#menu">See the Menu</a>
+        <a class="btn btn-ghost" href="#visit">Find Us</a>
       </div>
     </div>
   </header>
