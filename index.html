@@ -140,7 +140,7 @@
   </div>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" data-studio-section="hero">
     <div class="hero-content">
       <div class="hero-mascot">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,9 +154,9 @@
           <path d="M60 18 L62 8" stroke="var(--cream)" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
       </div>
-      <p class="hero-tag">Oak Cliff · Dallas, Texas</p>
-      <h1>With <em>Latte</em><br>Love from<br>Oak Cliff</h1>
-      <p class="hero-subtitle">Handcrafted coffee, treats & teas. A cozy, modern space for our neighborhood to call home.</p>
+      <p class="hero-tag" data-studio="eyebrow">Oak Cliff · Dallas, Texas</p>
+      <h1 data-studio="headline" data-studio-type="richtext">With <em>Latte</em><br>Love from<br>Oak Cliff</h1>
+      <p class="hero-subtitle" data-studio="subtitle">Handcrafted coffee, treats & teas. A cozy, modern space for our neighborhood to call home.</p>
       <a href="https://maps.google.com/?q=Latte+Haus+Dallas+TX" target="_blank" class="hero-status" id="hero-status">
         <span class="hero-status-dot" aria-hidden="true"></span>
         <span id="hero-status-text">Open today until 7pm</span>
@@ -164,8 +164,8 @@
         <span>2446 W Kiest Blvd</span>
       </a>
       <div class="hero-actions">
-        <a href="#order" class="btn-primary">Order Ahead</a>
-        <a href="#menu" class="btn-secondary">See the Menu</a>
+        <a href="#order" class="btn-primary" data-studio="order-button" data-studio-label="Order button">Order Ahead</a>
+        <a href="#menu" class="btn-secondary" data-studio="menu-button" data-studio-label="Menu button">See the Menu</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -174,30 +174,30 @@
   </section>
 
   <!-- REVIEWS (short) -->
-  <section class="reviews reviews-compact">
+  <section class="reviews reviews-compact" data-studio-section="rating" data-studio-section-label="Google rating">
     <div class="reviews-inner">
       <p class="section-tag reveal">What People Are Saying</p>
-      <h2 class="reveal">Loved by Oak Cliff</h2>
-      <p class="reviews-rating reveal">★ ★ ★ ★ ★ &nbsp; <a href="https://maps.google.com/?q=Latte+Haus+Dallas+TX" target="_blank">4.9 on Google · 34 Reviews</a></p>
+      <h2 class="reveal" data-studio="title">Loved by Oak Cliff</h2>
+      <p class="reviews-rating reveal">★ ★ ★ ★ ★ &nbsp; <a href="https://maps.google.com/?q=Latte+Haus+Dallas+TX" target="_blank" data-studio="rating" data-studio-label="Rating link">4.9 on Google · 34 Reviews</a></p>
     </div>
   </section>
 
   <!-- MATCHA + MENU -->
-  <section class="matcha-menu" id="menu">
+  <section class="matcha-menu" id="menu" data-studio-section="menu">
     <div class="matcha-menu-inner">
       <div class="matcha-side reveal">
-        <p class="section-tag">Now Serving</p>
-        <h2>New on the Menu</h2>
-        <p>Meet the Fruity Pebbles Latte and the Horchata Latte — both made your way, matcha or coffee. Plus new Honeycomb, Strawberry Matcha, Banana Matcha, and more. Come try the whole lineup.</p>
+        <p class="section-tag" data-studio="new-eyebrow" data-studio-label="New items eyebrow">Now Serving</p>
+        <h2 data-studio="new-title" data-studio-label="New items title">New on the Menu</h2>
+        <p data-studio="new-text" data-studio-label="New items text">Meet the Fruity Pebbles Latte and the Horchata Latte — both made your way, matcha or coffee. Plus new Honeycomb, Strawberry Matcha, Banana Matcha, and more. Come try the whole lineup.</p>
         <div class="matcha-image">
-          <img src="images/fruity-pebbles-pair.jpg" alt="Fruity Pebbles Lattes at Latte Haus — matcha and coffee topped with whipped cream and cereal">
+          <img data-studio="new-photo" data-studio-label="New items photo" src="images/fruity-pebbles-pair.jpg" alt="Fruity Pebbles Lattes at Latte Haus — matcha and coffee topped with whipped cream and cereal">
         </div>
       </div>
       <div class="menu-side reveal">
         <div class="menu-header">
           <p class="section-tag">The Menu</p>
-          <h2>What We're Pouring</h2>
-          <p>Handcrafted daily. Seasonal specials rotate — follow us on Instagram for the latest.</p>
+          <h2 data-studio="menu-title" data-studio-label="Menu title">What We're Pouring</h2>
+          <p data-studio="menu-intro" data-studio-label="Menu intro">Handcrafted daily. Seasonal specials rotate — follow us on Instagram for the latest.</p>
         </div>
         <div class="menu-tabs">
           <button class="menu-tab active" onclick="switchTab('specialty')">Lattes</button>
@@ -207,80 +207,85 @@
         </div>
 
         <!-- ========== COFFEE TAB ========== -->
-        <div class="menu-category" id="tab-coffee">
-          <div class="menu-item"><div><div class="menu-item-name">Latte</div><div class="menu-item-desc">Espresso + steamed milk · Hot or iced</div></div><div class="menu-item-price">$5.25 / $6.25</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Cappuccino</div><div class="menu-item-desc">Espresso, steamed milk &amp; foam</div></div><div class="menu-item-price">$4.50</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Americano</div><div class="menu-item-desc">Espresso + hot water</div></div><div class="menu-item-price">$4.75</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Macchiato</div><div class="menu-item-desc">Espresso with a touch of foam</div></div><div class="menu-item-price">$3.25</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Cortado</div><div class="menu-item-desc">Equal parts espresso &amp; steamed milk</div></div><div class="menu-item-price">$4</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Drip Coffee</div><div class="menu-item-desc">House blend, freshly brewed</div></div><div class="menu-item-price">$3.50</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Espresso</div><div class="menu-item-desc">Single shot</div></div><div class="menu-item-price">$2.25</div></div>
+        <div class="menu-category" id="tab-coffee" data-studio="coffee" data-studio-label="Coffee">
+          <template data-studio-item><div class="menu-item"><div><div class="menu-item-name" data-studio-field="name"></div><div class="menu-item-desc" data-studio-field="desc" data-studio-label="Description"></div></div><div class="menu-item-price" data-studio-field="price"></div></div></template>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Latte</div><div class="menu-item-desc" data-studio-field="desc">Espresso + steamed milk · Hot or iced</div></div><div class="menu-item-price" data-studio-field="price">$5.25 / $6.25</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Cappuccino</div><div class="menu-item-desc" data-studio-field="desc">Espresso, steamed milk &amp; foam</div></div><div class="menu-item-price" data-studio-field="price">$4.50</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Americano</div><div class="menu-item-desc" data-studio-field="desc">Espresso + hot water</div></div><div class="menu-item-price" data-studio-field="price">$4.75</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Macchiato</div><div class="menu-item-desc" data-studio-field="desc">Espresso with a touch of foam</div></div><div class="menu-item-price" data-studio-field="price">$3.25</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Cortado</div><div class="menu-item-desc" data-studio-field="desc">Equal parts espresso &amp; steamed milk</div></div><div class="menu-item-price" data-studio-field="price">$4</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Drip Coffee</div><div class="menu-item-desc" data-studio-field="desc">House blend, freshly brewed</div></div><div class="menu-item-price" data-studio-field="price">$3.50</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Espresso</div><div class="menu-item-desc" data-studio-field="desc">Single shot</div></div><div class="menu-item-price" data-studio-field="price">$2.25</div></div>
         </div>
 
         <!-- ========== SPECIALTY TAB ========== -->
-        <div class="menu-category active" id="tab-specialty">
-          <div class="menu-item"><div><div class="menu-item-name">Haus Latte</div><div class="menu-item-desc">Vanilla + brown butter toffee cold foam + cookie crumbs</div></div><div class="menu-item-price">$6.20 / $7.20</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Fruity Pebbles Latte</div><div class="menu-item-desc">Matcha or coffee</div></div><div class="menu-item-price">$6.25 / $7.25</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Horchata Latte</div><div class="menu-item-desc">Matcha or coffee</div></div><div class="menu-item-price">$6.30 / $7.30</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Fresa Blanca</div><div class="menu-item-desc">Strawberry + white mocha + strawberry cold foam</div></div><div class="menu-item-price">$6.25 / $7.25</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Pistachio Cloud</div><div class="menu-item-desc">Salted honey + pistachio cold foam</div></div><div class="menu-item-price">$6.20 / $7.20</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Lechera Latte</div><div class="menu-item-desc">Matcha or coffee</div></div><div class="menu-item-price">$5.80 / $6.80</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Honeycomb</div><div class="menu-item-desc">Salted honey + caramel</div></div><div class="menu-item-price">$5.80 / $6.80</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Blueberry Muffin Matcha</div><div class="menu-item-desc">Blueberry puree + cold foam + muffin crumbs</div></div><div class="menu-item-price">$7.50</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Strawberry Matcha</div><div class="menu-item-desc">Ceremonial grade matcha + strawberry</div></div><div class="menu-item-price">$7.20</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Banana Matcha</div><div class="menu-item-desc">Ceremonial grade matcha + banana</div></div><div class="menu-item-price">$7.20</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Matcha Latte</div><div class="menu-item-desc">Ceremonial grade, hot or iced</div></div><div class="menu-item-price">$7.20</div></div>
+        <div class="menu-category active" id="tab-specialty" data-studio="lattes" data-studio-label="Lattes">
+          <template data-studio-item><div class="menu-item"><div><div class="menu-item-name" data-studio-field="name"></div><div class="menu-item-desc" data-studio-field="desc" data-studio-label="Description"></div></div><div class="menu-item-price" data-studio-field="price"></div></div></template>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Haus Latte</div><div class="menu-item-desc" data-studio-field="desc">Vanilla + brown butter toffee cold foam + cookie crumbs</div></div><div class="menu-item-price" data-studio-field="price">$6.20 / $7.20</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Fruity Pebbles Latte</div><div class="menu-item-desc" data-studio-field="desc">Matcha or coffee</div></div><div class="menu-item-price" data-studio-field="price">$6.25 / $7.25</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Horchata Latte</div><div class="menu-item-desc" data-studio-field="desc">Matcha or coffee</div></div><div class="menu-item-price" data-studio-field="price">$6.30 / $7.30</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Fresa Blanca</div><div class="menu-item-desc" data-studio-field="desc">Strawberry + white mocha + strawberry cold foam</div></div><div class="menu-item-price" data-studio-field="price">$6.25 / $7.25</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Pistachio Cloud</div><div class="menu-item-desc" data-studio-field="desc">Salted honey + pistachio cold foam</div></div><div class="menu-item-price" data-studio-field="price">$6.20 / $7.20</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Lechera Latte</div><div class="menu-item-desc" data-studio-field="desc">Matcha or coffee</div></div><div class="menu-item-price" data-studio-field="price">$5.80 / $6.80</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Honeycomb</div><div class="menu-item-desc" data-studio-field="desc">Salted honey + caramel</div></div><div class="menu-item-price" data-studio-field="price">$5.80 / $6.80</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Blueberry Muffin Matcha</div><div class="menu-item-desc" data-studio-field="desc">Blueberry puree + cold foam + muffin crumbs</div></div><div class="menu-item-price" data-studio-field="price">$7.50</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Strawberry Matcha</div><div class="menu-item-desc" data-studio-field="desc">Ceremonial grade matcha + strawberry</div></div><div class="menu-item-price" data-studio-field="price">$7.20</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Banana Matcha</div><div class="menu-item-desc" data-studio-field="desc">Ceremonial grade matcha + banana</div></div><div class="menu-item-price" data-studio-field="price">$7.20</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Matcha Latte</div><div class="menu-item-desc" data-studio-field="desc">Ceremonial grade, hot or iced</div></div><div class="menu-item-price" data-studio-field="price">$7.20</div></div>
         </div>
 
         <!-- ========== TEA TAB ========== -->
-        <div class="menu-category" id="tab-tea">
-          <div class="menu-item"><div><div class="menu-item-name">Chai Latte</div><div class="menu-item-desc">Minor Figures chai</div></div><div class="menu-item-price">$5.20 / $6.20</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Dirty Chai</div><div class="menu-item-desc">Minor Figures chai + espresso</div></div><div class="menu-item-price">$6.20 / $7.20</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">RX Drink</div><div class="menu-item-desc">Lemon ginger tea + peppermint + honey, with lemonade or tea</div></div><div class="menu-item-price">$3 / $4</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Strawberry Acai</div><div class="menu-item-desc">Caffeinated refresher + strawberries</div></div><div class="menu-item-price">$4 / $5</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Jamaica Berry</div><div class="menu-item-desc">Hibiscus tea + raspberry syrup + lemonade</div></div><div class="menu-item-price">$4 / $5</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Cucumber Mint</div><div class="menu-item-desc">Mint tea + cucumber syrup + lemonade</div></div><div class="menu-item-price">$4 / $5</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Hot Chocolate</div><div class="menu-item-desc">Mocha + vanilla + cinnamon</div></div><div class="menu-item-price">$4 / $5</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">London Fog</div><div class="menu-item-desc">Earl grey tea + milk + vanilla/lavender</div></div><div class="menu-item-price"></div></div>
+        <div class="menu-category" id="tab-tea" data-studio="drinks" data-studio-label="Drinks">
+          <template data-studio-item><div class="menu-item"><div><div class="menu-item-name" data-studio-field="name"></div><div class="menu-item-desc" data-studio-field="desc" data-studio-label="Description"></div></div><div class="menu-item-price" data-studio-field="price"></div></div></template>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Chai Latte</div><div class="menu-item-desc" data-studio-field="desc">Minor Figures chai</div></div><div class="menu-item-price" data-studio-field="price">$5.20 / $6.20</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Dirty Chai</div><div class="menu-item-desc" data-studio-field="desc">Minor Figures chai + espresso</div></div><div class="menu-item-price" data-studio-field="price">$6.20 / $7.20</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">RX Drink</div><div class="menu-item-desc" data-studio-field="desc">Lemon ginger tea + peppermint + honey, with lemonade or tea</div></div><div class="menu-item-price" data-studio-field="price">$3 / $4</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Strawberry Acai</div><div class="menu-item-desc" data-studio-field="desc">Caffeinated refresher + strawberries</div></div><div class="menu-item-price" data-studio-field="price">$4 / $5</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Jamaica Berry</div><div class="menu-item-desc" data-studio-field="desc">Hibiscus tea + raspberry syrup + lemonade</div></div><div class="menu-item-price" data-studio-field="price">$4 / $5</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Cucumber Mint</div><div class="menu-item-desc" data-studio-field="desc">Mint tea + cucumber syrup + lemonade</div></div><div class="menu-item-price" data-studio-field="price">$4 / $5</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Hot Chocolate</div><div class="menu-item-desc" data-studio-field="desc">Mocha + vanilla + cinnamon</div></div><div class="menu-item-price" data-studio-field="price">$4 / $5</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">London Fog</div><div class="menu-item-desc" data-studio-field="desc">Earl grey tea + milk + vanilla/lavender</div></div><div class="menu-item-price" data-studio-field="price"></div></div>
         </div>
 
         <!-- ========== TREATS TAB ========== -->
-        <div class="menu-category" id="tab-treats">
-          <div class="menu-item"><div><div class="menu-item-name">Ham &amp; Cheese Croissant</div><div class="menu-item-desc">Savory, flaky, fresh baked</div></div><div class="menu-item-price">$5</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Chocolate Croissant</div><div class="menu-item-desc">Rich chocolate, buttery layers</div></div><div class="menu-item-price">$5</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Cinnamon Crunch Croissant</div><div class="menu-item-desc">Sweet cinnamon crunch, flaky layers</div></div><div class="menu-item-price">$4</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Blueberry Cheesecake Croissant</div><div class="menu-item-desc">Sweet, creamy &amp; flaky</div></div><div class="menu-item-price">$4</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Danish</div><div class="menu-item-desc">Strawberry, cheese, or cherry</div></div><div class="menu-item-price">$4</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Muffin</div><div class="menu-item-desc">Chocolate, banana nut, or blueberry</div></div><div class="menu-item-price">$4</div></div>
-          <div class="menu-item"><div><div class="menu-item-name">Butter Croissant</div><div class="menu-item-desc">Classic, golden, flaky</div></div><div class="menu-item-price">$3</div></div>
+        <div class="menu-category" id="tab-treats" data-studio="sweets" data-studio-label="Sweets">
+          <template data-studio-item><div class="menu-item"><div><div class="menu-item-name" data-studio-field="name"></div><div class="menu-item-desc" data-studio-field="desc" data-studio-label="Description"></div></div><div class="menu-item-price" data-studio-field="price"></div></div></template>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Ham &amp; Cheese Croissant</div><div class="menu-item-desc" data-studio-field="desc">Savory, flaky, fresh baked</div></div><div class="menu-item-price" data-studio-field="price">$5</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Chocolate Croissant</div><div class="menu-item-desc" data-studio-field="desc">Rich chocolate, buttery layers</div></div><div class="menu-item-price" data-studio-field="price">$5</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Cinnamon Crunch Croissant</div><div class="menu-item-desc" data-studio-field="desc">Sweet cinnamon crunch, flaky layers</div></div><div class="menu-item-price" data-studio-field="price">$4</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Blueberry Cheesecake Croissant</div><div class="menu-item-desc" data-studio-field="desc">Sweet, creamy &amp; flaky</div></div><div class="menu-item-price" data-studio-field="price">$4</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Danish</div><div class="menu-item-desc" data-studio-field="desc">Strawberry, cheese, or cherry</div></div><div class="menu-item-price" data-studio-field="price">$4</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Muffin</div><div class="menu-item-desc" data-studio-field="desc">Chocolate, banana nut, or blueberry</div></div><div class="menu-item-price" data-studio-field="price">$4</div></div>
+          <div class="menu-item"><div><div class="menu-item-name" data-studio-field="name">Butter Croissant</div><div class="menu-item-desc" data-studio-field="desc">Classic, golden, flaky</div></div><div class="menu-item-price" data-studio-field="price">$3</div></div>
         </div>
 
-        <p class="menu-note">Alt milk (oat, soy, almond, coconut) +$0.25 · Cold foam +$0.50 · Extra shot +$1.00 · Syrups +$0.50</p>
-        <p class="menu-note">Syrups: simple, white mocha, dulce de leche, pistachio, irish cream, lavender, brown sugar, vanilla (SF), caramel, honey, french vanilla, hazelnut (SF), cinnamon, cookie butter, banana</p>
+        <p class="menu-note" data-studio="addons" data-studio-label="Add-ons note">Alt milk (oat, soy, almond, coconut) +$0.25 · Cold foam +$0.50 · Extra shot +$1.00 · Syrups +$0.50</p>
+        <p class="menu-note" data-studio="syrups" data-studio-label="Syrups note">Syrups: simple, white mocha, dulce de leche, pistachio, irish cream, lavender, brown sugar, vanilla (SF), caramel, honey, french vanilla, hazelnut (SF), cinnamon, cookie butter, banana</p>
       </div>
     </div>
   </section>
 
   <!-- REVIEW QUOTES -->
-  <section class="reviews reviews-full">
+  <section class="reviews reviews-full" data-studio-section="reviews">
     <div class="reviews-inner">
       <p class="section-tag reveal">Real Reviews</p>
-      <h2 class="reveal">Why People Keep Coming Back</h2>
+      <h2 class="reveal" data-studio="title">Why People Keep Coming Back</h2>
       <!-- Quotes below are real, pulled from public customer reviews of Latte Haus (Yelp/joe.coffee listings).
            To upgrade: copy 3 Google reviews verbatim from https://maps.google.com/?q=Latte+Haus+Dallas+TX
            and add back a <p class="review-author">— First L.</p> line under each quote. -->
-      <div class="reviews-grid reveal">
+      <div class="reviews-grid reveal" data-studio="quotes" data-studio-label="Review quotes">
+        <template data-studio-item><div class="review-card"><div class="review-stars">★ ★ ★ ★ ★</div><p class="review-text" data-studio-field="quote"></p></div></template>
         <div class="review-card">
           <div class="review-stars">★ ★ ★ ★ ★</div>
-          <p class="review-text">"My husband and I are very picky when it comes to our coffee and they meet our expectations!!!"</p>
+          <p class="review-text" data-studio-field="quote">"My husband and I are very picky when it comes to our coffee and they meet our expectations!!!"</p>
         </div>
         <div class="review-card">
           <div class="review-stars">★ ★ ★ ★ ★</div>
-          <p class="review-text">"Super friendly staff that treat their customers like family."</p>
+          <p class="review-text" data-studio-field="quote">"Super friendly staff that treat their customers like family."</p>
         </div>
         <div class="review-card">
           <div class="review-stars">★ ★ ★ ★ ★</div>
-          <p class="review-text">"The atmosphere is very nice and peaceful. A great place to relax."</p>
+          <p class="review-text" data-studio-field="quote">"The atmosphere is very nice and peaceful. A great place to relax."</p>
         </div>
       </div>
       <p class="reviews-rating reveal">From public customer reviews · <a href="https://maps.google.com/?q=Latte+Haus+Dallas+TX" target="_blank">Read more on Google</a></p>
@@ -288,46 +293,47 @@
   </section>
 
   <!-- ORDER -->
-  <section class="order" id="order">
+  <section class="order" id="order" data-studio-section="order" data-studio-section-label="Order ahead">
     <div class="order-inner">
       <p class="section-tag reveal">Skip the Wait</p>
-      <h2 class="reveal">Order Ahead,<br>Pick Up Happy</h2>
-      <p class="reveal">Place your order before you leave the house. DM us on Instagram and we'll have it ready when you walk in.</p>
-      <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="btn-primary dm-btn reveal">
+      <h2 class="reveal" data-studio="title" data-studio-type="richtext">Order Ahead,<br>Pick Up Happy</h2>
+      <p class="reveal" data-studio="text">Place your order before you leave the house. DM us on Instagram and we'll have it ready when you walk in.</p>
+      <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="btn-primary dm-btn reveal" data-studio="dm-link" data-studio-label="Instagram DM link">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="vertical-align: middle; margin-right: 6px;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         DM Us to Order
       </a>
-      <p class="reveal" style="margin-top:1rem; font-size:0.75rem; color:var(--charcoal); opacity:0.4;">Online ordering launching soon.</p>
+      <p class="reveal" style="margin-top:1rem; font-size:0.75rem; color:var(--charcoal); opacity:0.4;" data-studio="note" data-studio-label="Small note">Online ordering launching soon.</p>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="about" id="about">
+  <section class="about" id="about" data-studio-section="about" data-studio-section-label="Our story">
     <div class="about-inner reveal">
       <div class="about-image">
-        <img src="images/wall-sign-interior.jpg" alt="With Latte Love from Oak Cliff sign inside Latte Haus with pink velvet chairs" loading="lazy">
+        <img data-studio="photo" src="images/wall-sign-interior.jpg" alt="With Latte Love from Oak Cliff sign inside Latte Haus with pink velvet chairs" loading="lazy">
       </div>
       <div class="about-text">
         <p class="section-tag">Our Story</p>
-        <h2>Brewing Something Special for Oak Cliff</h2>
-        <p>Latte Haus was born from a simple idea — that Oak Cliff deserves a coffee shop where everyone feels like family. Founded by Emily, a passionate young entrepreneur, we opened our doors on W Kiest Blvd to bring handcrafted drinks, warm energy, and a beautifully designed space to the neighborhood.</p>
-        <p>Whether you're grabbing your morning cold brew, settling in for a midday matcha, or catching up with friends over one of our seasonal specials — this is your space. We're not just making coffee. We're building community, one cup at a time.</p>
-        <div class="about-values">
+        <h2 data-studio="title">Brewing Something Special for Oak Cliff</h2>
+        <p data-studio="story-1" data-studio-label="Story paragraph 1">Latte Haus was born from a simple idea — that Oak Cliff deserves a coffee shop where everyone feels like family. Founded by Emily, a passionate young entrepreneur, we opened our doors on W Kiest Blvd to bring handcrafted drinks, warm energy, and a beautifully designed space to the neighborhood.</p>
+        <p data-studio="story-2" data-studio-label="Story paragraph 2">Whether you're grabbing your morning cold brew, settling in for a midday matcha, or catching up with friends over one of our seasonal specials — this is your space. We're not just making coffee. We're building community, one cup at a time.</p>
+        <div class="about-values" data-studio="values" data-studio-label="Values">
+          <template data-studio-item><div class="about-value"><div class="about-value-icon" data-studio-field="icon"></div><div class="about-value-label" data-studio-field="label"></div></div></template>
           <div class="about-value">
-            <div class="about-value-icon">🤝</div>
-            <div class="about-value-label">Community First</div>
+            <div class="about-value-icon" data-studio-field="icon">🤝</div>
+            <div class="about-value-label" data-studio-field="label">Community First</div>
           </div>
           <div class="about-value">
-            <div class="about-value-icon">✨</div>
-            <div class="about-value-label">Handcrafted</div>
+            <div class="about-value-icon" data-studio-field="icon">✨</div>
+            <div class="about-value-label" data-studio-field="label">Handcrafted</div>
           </div>
           <div class="about-value">
-            <div class="about-value-icon">🐕</div>
-            <div class="about-value-label">Dogs Welcome</div>
+            <div class="about-value-icon" data-studio-field="icon">🐕</div>
+            <div class="about-value-label" data-studio-field="label">Dogs Welcome</div>
           </div>
           <div class="about-value">
-            <div class="about-value-icon">☕</div>
-            <div class="about-value-label">Quality First</div>
+            <div class="about-value-icon" data-studio-field="icon">☕</div>
+            <div class="about-value-label" data-studio-field="label">Quality First</div>
           </div>
         </div>
       </div>
@@ -335,36 +341,38 @@
   </section>
 
   <!-- VIBE GALLERY -->
-  <div class="photo-strip">
-    <img src="images/horchata-cinnamon-sprinkle.jpg" alt="Cinnamon being sprinkled over Horchata Lattes at Latte Haus" loading="lazy">
-    <img src="images/interior-lounge.jpg" alt="Cozy lounge interior at Latte Haus" loading="lazy">
-    <img src="images/fruity-pebbles-duo.jpg" alt="Fruity Pebbles Lattes topped with whipped cream and cereal at Latte Haus" loading="lazy">
-    <img src="images/latte-art-marble.jpg" alt="Latte art on marble table at Latte Haus" loading="lazy">
-    <img src="images/horchata-matcha-pair-wall.jpg" alt="Horchata Latte and matcha Horchata Latte held against white brick at Latte Haus" loading="lazy">
+  <div class="photo-strip" data-studio-section="photos" data-studio-section-label="Photo strip">
+    <img data-studio="photo-1" data-studio-label="Photo 1" src="images/horchata-cinnamon-sprinkle.jpg" alt="Cinnamon being sprinkled over Horchata Lattes at Latte Haus" loading="lazy">
+    <img data-studio="photo-2" data-studio-label="Photo 2" src="images/interior-lounge.jpg" alt="Cozy lounge interior at Latte Haus" loading="lazy">
+    <img data-studio="photo-3" data-studio-label="Photo 3" src="images/fruity-pebbles-duo.jpg" alt="Fruity Pebbles Lattes topped with whipped cream and cereal at Latte Haus" loading="lazy">
+    <img data-studio="photo-4" data-studio-label="Photo 4" src="images/latte-art-marble.jpg" alt="Latte art on marble table at Latte Haus" loading="lazy">
+    <img data-studio="photo-5" data-studio-label="Photo 5" src="images/horchata-matcha-pair-wall.jpg" alt="Horchata Latte and matcha Horchata Latte held against white brick at Latte Haus" loading="lazy">
   </div>
 
   <!-- LOCATION -->
-  <section class="location" id="location">
+  <section class="location" id="location" data-studio-section="location" data-studio-section-label="Location & hours">
     <div class="location-inner">
       <div class="location-text reveal">
         <p class="section-tag">Find Us</p>
-        <h2>Come Say Hey</h2>
-        <div class="location-address">
+        <h2 data-studio="title">Come Say Hey</h2>
+        <div class="location-address" data-studio="address" data-studio-type="richtext">
           <strong>2446 W Kiest Blvd</strong><br>
           Dallas, TX 75233<br>
           Oak Cliff<br><br>
           <a href="https://maps.google.com/?q=2446+W+Kiest+Blvd+Dallas+TX+75233" target="_blank">Get Directions →</a>
         </div>
-        <div class="hours-grid">
-          <div class="hours-row"><span class="hours-day">Monday — Friday</span><span class="hours-time">7:00 AM — 7:00 PM</span></div>
-          <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time">8:00 AM — 4:00 PM</span></div>
-          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">8:00 AM — 11:00 AM</span></div>
+        <div class="hours-grid" data-studio="hours">
+          <template data-studio-item><div class="hours-row"><span class="hours-day" data-studio-field="days"></span><span class="hours-time" data-studio-field="time"></span></div></template>
+          <div class="hours-row"><span class="hours-day" data-studio-field="days">Monday — Friday</span><span class="hours-time" data-studio-field="time">7:00 AM — 7:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day" data-studio-field="days">Saturday</span><span class="hours-time" data-studio-field="time">8:00 AM — 4:00 PM</span></div>
+          <div class="hours-row"><span class="hours-day" data-studio-field="days">Sunday</span><span class="hours-time" data-studio-field="time">8:00 AM — 11:00 AM</span></div>
         </div>
-        <div class="location-extras">
-          <div class="location-extra"><span>🐕</span> Dog Friendly</div>
-          <div class="location-extra"><span>💳</span> Cards &amp; Cash</div>
-          <div class="location-extra"><span>📶</span> Free WiFi</div>
-          <div class="location-extra"><span>🅿️</span> Free Parking Lot</div>
+        <div class="location-extras" data-studio="extras" data-studio-label="Amenities">
+          <template data-studio-item><div class="location-extra"><span data-studio-field="icon"></span> <span data-studio-field="label"></span></div></template>
+          <div class="location-extra"><span data-studio-field="icon">🐕</span> <span data-studio-field="label">Dog Friendly</span></div>
+          <div class="location-extra"><span data-studio-field="icon">💳</span> <span data-studio-field="label">Cards &amp; Cash</span></div>
+          <div class="location-extra"><span data-studio-field="icon">📶</span> <span data-studio-field="label">Free WiFi</span></div>
+          <div class="location-extra"><span data-studio-field="icon">🅿️</span> <span data-studio-field="label">Free Parking Lot</span></div>
         </div>
       </div>
       <div class="location-map reveal">
@@ -377,7 +385,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-logo">Latte Haus</div>
-      <p class="footer-tagline-main">With Latte Love from Oak Cliff</p>
+      <p class="footer-tagline-main" data-studio="footer.tagline" data-studio-label="Footer tagline">With Latte Love from Oak Cliff</p>
 
       <div class="footer-socials">
         <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" class="footer-social" aria-label="Instagram">
@@ -398,6 +406,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="https://site-studio-kappa.vercel.app/studio.js" data-site="latte-haus" defer></script>
 
 </body>
 </html>
