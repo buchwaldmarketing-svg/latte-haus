@@ -29,5 +29,6 @@ PY
 }
 
 render menu.html latte-haus-menu.pdf menu
-render fall.html latte-haus-fall-menu.pdf fall-menu
-ls -la latte-haus-menu.pdf latte-haus-fall-menu.pdf images/menu*.webp images/fall-menu*.webp
+# Image names are cached for a year: bump the -vN prefix (and script.js MENUS) whenever the fall menu changes.
+render fall.html latte-haus-fall-menu.pdf fall-menu-v2
+ls -la latte-haus-menu.pdf latte-haus-fall-menu.pdf images/menu*.webp images/fall-menu-v2*.webp
