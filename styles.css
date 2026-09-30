@@ -81,6 +81,7 @@ h2.display { font-size: clamp(40px, 5.2vw, 72px); }
 .fall-card:hover { box-shadow: none; }
 .fall-card img, .fall-video { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; background: #2a211a; }
 .fall-tag { position: absolute; left: 16px; bottom: 16px; background: #ffffff; padding: 10px 14px; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--btn-ink); }
+.menu-wide { display: block; width: 100%; max-width: 520px; height: auto; aspect-ratio: 2 / 1; object-fit: cover; margin-top: 28px; }
 .menu-index { margin-top: 30px; max-width: 520px; border-top: 2px solid var(--rail); }
 .mi-row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 13px 0 12px; background: linear-gradient(var(--rail), var(--rail)) left bottom / 100% 2px no-repeat; }
 .mi-name { font-size: 12.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
