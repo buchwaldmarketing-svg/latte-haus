@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Latte Haus · Menu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500..800&family=Hanken+Grotesk:wght@400..700&display=block">
+<style>
+  /* One Letter page. Their letterboard menu inside the gold frame of the wall sign. Source of truth for the PDF + pop-up images: re-run render.sh after any edit. */
+  @page { size: 8.5in 11in; margin: 0; }
+  :root { --ink: #141414; --gold: #B8965A; --rail: #E2D3BD; --mute: #6A635E; --honey: #8C6A1F; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 816px; height: 1056px; }
+  body { background: #FFFFFF; color: var(--ink); font-family: "Hanken Grotesk", Arial, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; overflow: hidden; position: relative; }
+  .frame { position: absolute; inset: 22px; border: 1.5px solid var(--gold); pointer-events: none; }
+  .page { height: 100%; padding: 42px 58px 38px; display: flex; flex-direction: column; }
+  .track { font-size: 10.5px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+
+  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-bottom: 14px; border-bottom: 2px solid var(--ink); }
+  .mark { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 56px; line-height: .9; letter-spacing: -.01em; white-space: nowrap; }
+  .mark small { display: block; margin-top: 10px; color: var(--honey); font-family: "Hanken Grotesk", Arial, sans-serif; }
+  header .r { text-align: right; display: grid; gap: 6px; }
+  header .r .mute { color: var(--mute); }
+
+  .cols { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 0 44px; padding-top: 14px; }
+  .group + .group, .left > div > .group, .right > div > .group { margin-top: 18px; }
+  .group h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 27px; line-height: 1; padding-bottom: 7px; border-bottom: 2px solid var(--rail); }
+  .item { padding: 5px 0 4px; border-bottom: 2px solid var(--rail); }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .name { font-size: 11.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  .price { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .desc { font-size: 10.5px; line-height: 1.25; color: var(--mute); margin-top: 1px; }
+
+  .extras { margin-top: 16px; display: grid; gap: 8px; }
+  .extras p { font-size: 11px; line-height: 1.45; }
+  .extras b { font-size: 10.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; margin-right: 6px; }
+
+  footer { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 10px; padding-top: 12px; border-top: 2px solid var(--ink); }
+  .sign-off { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 21px; }
+
+  /* Phone version for the pop-up: one column, bigger type. Screenshot at 500px wide. */
+  @media screen and (max-width: 600px) {
+    html, body { width: 500px; height: auto; }
+    body { overflow: visible; }
+    .frame { inset: 14px; }
+    .page { height: auto; padding: 44px 36px 40px; }
+    header { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .mark { font-size: 66px; }
+    header .r { text-align: left; }
+    .track { font-size: 12px; }
+    .cols { display: block; }
+    .group, .group + .group { margin-top: 34px; }
+    .group h2 { font-size: 38px; }
+    .item { padding: 12px 0 11px; }
+    .name { font-size: 14.5px; }
+    .price { font-size: 15px; }
+    .desc { font-size: 14.5px; }
+    .extras { margin-top: 30px; }
+    .extras p { font-size: 14.5px; }
+    .extras b { font-size: 12px; }
+    footer { flex-direction: column; gap: 8px; margin-top: 30px; }
+    .sign-off { font-size: 26px; }
+  }
+  .phone-only { display: none; }
+  @media screen and (max-width: 600px) { .desktop-only { display: none; } .phone-only { display: block; } }
+</style>
+</head>
+<body>
+  <div class="frame" aria-hidden="true"></div>
+  <div class="page">
+    <header>
+      <h1 class="mark">Latte Haus<small class="track">Menu</small></h1>
+      <div class="r">
+        <p class="track">2446 W Kiest Blvd · Oak Cliff</p>
+        <p class="track mute">Mon to Fri 7am to 7pm</p><p class="track mute">Sat 8am to 4pm · Sun 8am to 11am</p>
+      </div>
+    </header>
+    <div class="cols">
+      <div class="left"><section class="group g-lattes"><h2>Lattes</h2><div class="item"><div class="row"><span class="name">Haus Latte</span><span class="price">$6.20 / $7.20</span></div><p class="desc">Vanilla + brown butter toffee cold foam + cookie crumbs</p></div><div class="item"><div class="row"><span class="name">Fruity Pebbles Latte</span><span class="price">$6.25 / $7.25</span></div><p class="desc">Matcha or coffee</p></div><div class="item"><div class="row"><span class="name">Horchata Latte</span><span class="price">$6.30 / $7.30</span></div><p class="desc">Matcha or coffee</p></div><div class="item"><div class="row"><span class="name">Fresa Blanca</span><span class="price">$6.25 / $7.25</span></div><p class="desc">Strawberry + white mocha + strawberry cold foam</p></div><div class="item"><div class="row"><span class="name">Pistachio Cloud</span><span class="price">$6.20 / $7.20</span></div><p class="desc">Salted honey + pistachio cold foam</p></div><div class="item"><div class="row"><span class="name">Lechera Latte</span><span class="price">$5.80 / $6.80</span></div><p class="desc">Matcha or coffee</p></div><div class="item"><div class="row"><span class="name">Honeycomb</span><span class="price">$5.80 / $6.80</span></div><p class="desc">Salted honey + caramel</p></div><div class="item"><div class="row"><span class="name">Blueberry Muffin Matcha</span><span class="price">$7.50</span></div><p class="desc">Blueberry puree + cold foam + muffin crumbs</p></div><div class="item"><div class="row"><span class="name">Strawberry Matcha</span><span class="price">$7.20</span></div><p class="desc">Ceremonial grade matcha + strawberry</p></div><div class="item"><div class="row"><span class="name">Banana Matcha</span><span class="price">$7.20</span></div><p class="desc">Ceremonial grade matcha + banana</p></div><div class="item"><div class="row"><span class="name">Matcha Latte</span><span class="price">$7.20</span></div><p class="desc">Ceremonial grade, hot or iced</p></div></section><div class="desktop-only"><section class="group g-sweets"><h2>Sweets</h2><div class="item"><div class="row"><span class="name">Ham + Cheese Croissant</span><span class="price">$5</span></div><p class="desc">Savory, flaky, fresh baked</p></div><div class="item"><div class="row"><span class="name">Chocolate Croissant</span><span class="price">$5</span></div><p class="desc">Rich chocolate, buttery layers</p></div><div class="item"><div class="row"><span class="name">Cinnamon Crunch Croissant</span><span class="price">$4</span></div><p class="desc">Sweet cinnamon crunch, flaky layers</p></div><div class="item"><div class="row"><span class="name">Blueberry Cheesecake Croissant</span><span class="price">$4</span></div><p class="desc">Sweet, creamy + flaky</p></div><div class="item"><div class="row"><span class="name">Danish</span><span class="price">$4</span></div><p class="desc">Strawberry, cheese or cherry</p></div><div class="item"><div class="row"><span class="name">Muffin</span><span class="price">$4</span></div><p class="desc">Chocolate, banana nut or blueberry</p></div><div class="item"><div class="row"><span class="name">Butter Croissant</span><span class="price">$3</span></div><p class="desc">Classic, golden, flaky</p></div></section></div></div>
+      <div class="right"><section class="group g-coffee"><h2>Coffee</h2><div class="item"><div class="row"><span class="name">Latte</span><span class="price">$5.25 / $6.25</span></div><p class="desc">Espresso + steamed milk, hot or iced</p></div><div class="item"><div class="row"><span class="name">Cappuccino</span><span class="price">$4.50</span></div><p class="desc">Espresso, steamed milk + foam</p></div><div class="item"><div class="row"><span class="name">Americano</span><span class="price">$4.75</span></div><p class="desc">Espresso + hot water</p></div><div class="item"><div class="row"><span class="name">Macchiato</span><span class="price">$3.25</span></div><p class="desc">Espresso with a touch of foam</p></div><div class="item"><div class="row"><span class="name">Cortado</span><span class="price">$4</span></div><p class="desc">Equal parts espresso + steamed milk</p></div><div class="item"><div class="row"><span class="name">Drip Coffee</span><span class="price">$3.50</span></div><p class="desc">House blend, freshly brewed</p></div><div class="item"><div class="row"><span class="name">Espresso</span><span class="price">$2.25</span></div><p class="desc">Single shot</p></div></section><section class="group g-drinks"><h2>Drinks</h2><div class="item"><div class="row"><span class="name">Chai Latte</span><span class="price">$5.20 / $6.20</span></div><p class="desc">Minor Figures chai</p></div><div class="item"><div class="row"><span class="name">Dirty Chai</span><span class="price">$6.20 / $7.20</span></div><p class="desc">Minor Figures chai + espresso</p></div><div class="item"><div class="row"><span class="name">RX Drink</span><span class="price">$3 / $4</span></div><p class="desc">Lemon ginger tea + peppermint + honey, with lemonade or tea</p></div><div class="item"><div class="row"><span class="name">Strawberry Acai</span><span class="price">$4 / $5</span></div><p class="desc">Caffeinated refresher + strawberries</p></div><div class="item"><div class="row"><span class="name">Jamaica Berry</span><span class="price">$4 / $5</span></div><p class="desc">Hibiscus tea + raspberry syrup + lemonade</p></div><div class="item"><div class="row"><span class="name">Cucumber Mint</span><span class="price">$4 / $5</span></div><p class="desc">Mint tea + cucumber syrup + lemonade</p></div><div class="item"><div class="row"><span class="name">Hot Chocolate</span><span class="price">$4 / $5</span></div><p class="desc">Mocha + vanilla + cinnamon</p></div><div class="item"><div class="row"><span class="name">London Fog</span><span class="price"></span></div><p class="desc">Earl grey tea + milk + vanilla or lavender</p></div></section><div class="phone-only"><section class="group g-sweets"><h2>Sweets</h2><div class="item"><div class="row"><span class="name">Ham + Cheese Croissant</span><span class="price">$5</span></div><p class="desc">Savory, flaky, fresh baked</p></div><div class="item"><div class="row"><span class="name">Chocolate Croissant</span><span class="price">$5</span></div><p class="desc">Rich chocolate, buttery layers</p></div><div class="item"><div class="row"><span class="name">Cinnamon Crunch Croissant</span><span class="price">$4</span></div><p class="desc">Sweet cinnamon crunch, flaky layers</p></div><div class="item"><div class="row"><span class="name">Blueberry Cheesecake Croissant</span><span class="price">$4</span></div><p class="desc">Sweet, creamy + flaky</p></div><div class="item"><div class="row"><span class="name">Danish</span><span class="price">$4</span></div><p class="desc">Strawberry, cheese or cherry</p></div><div class="item"><div class="row"><span class="name">Muffin</span><span class="price">$4</span></div><p class="desc">Chocolate, banana nut or blueberry</p></div><div class="item"><div class="row"><span class="name">Butter Croissant</span><span class="price">$3</span></div><p class="desc">Classic, golden, flaky</p></div></section></div>
+        <div class="extras">
+          <p><b>Add-ons</b>Alt milk (oat, soy, almond, coconut) +$0.25 · Cold foam +$0.50 · Extra shot +$1.00 · Syrups +$0.50</p>
+          <p><b>Syrups</b>Simple, white mocha, dulce de leche, pistachio, irish cream, lavender, brown sugar, vanilla (SF), caramel, honey, french vanilla, hazelnut (SF), cinnamon, cookie butter, banana</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="sign-off">With latte love from Oak Cliff</p>
+      <p class="track">@lattehauscoffee</p>
+    </footer>
+  </div>
+</body>
+</html>
