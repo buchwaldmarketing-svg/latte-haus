@@ -114,7 +114,7 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
     });
   }, { rootMargin: '0px 0px -12% 0px' });
   const pending = [];
-  document.querySelectorAll('.menu-card, .menu-copy, .menu-index, .tile-group, .story-photos, .story-copy, .quotes, .ig-head, .ig-grid, .order-photo, .order-copy, .visit').forEach(el => {
+  document.querySelectorAll('.menu-card, .menu-copy, .menu-index, .story-photos, .story-copy, .quotes, .ig-head, .ig-grid, .order-photo, .order-copy, .visit').forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight) return;
     el.classList.add('will-reveal');
     io.observe(el);
