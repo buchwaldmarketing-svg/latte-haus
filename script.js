@@ -130,3 +130,22 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
   setTimeout(sweep, 1500);
 }
 
+// ===== Videos. Phones get the behind-the-scenes hero reel; the fall loop plays only while on screen.
+// Reduced motion (or no JS) keeps the still posters. =====
+const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const startVideo = v => {
+  if (!v.src) v.src = v.dataset.src;
+  v.muted = true;
+  v.play().catch(() => {}); // Low Power Mode etc. can block autoplay: the poster just stays
+};
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo && !calm && matchMedia('(max-width: 767px)').matches) startVideo(heroVideo);
+
+const fallVideo = document.querySelector('.fall-video');
+if (fallVideo && !calm && 'IntersectionObserver' in window) {
+  new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) startVideo(fallVideo);
+    else if (fallVideo.src) fallVideo.pause();
+  }, { rootMargin: '200px 0px' }).observe(fallVideo);
+}
+

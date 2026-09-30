@@ -76,6 +76,8 @@
     <!-- HERO: full-screen storefront photo (same shot as the live site), Onyx-style. Header floats on top in white; the sign line sits centered on the image. -->
     <section class="hero" data-studio-section="hero">
       <img class="hero-img" data-studio="photo" src="images/hero-storefront.jpg" width="1600" height="2315" alt="The Latte Haus storefront on W Kiest Blvd in Oak Cliff" fetchpriority="high">
+      <!-- Phones only: behind-the-scenes reel (Lee's fall shoot). script.js loads it on small screens; desktop keeps the storefront photo. -->
+      <video class="hero-video" muted playsinline loop preload="none" poster="media/hero-reel-poster.jpg" data-src="media/hero-reel.mp4" aria-hidden="true"></video>
       <div class="hero-center">
         <p class="hero-eyebrow" data-studio="eyebrow">Oak Cliff · Dallas, Texas</p>
         <h1 class="display" data-studio="headline" data-studio-type="richtext">With <em>latte</em> love<br>from Oak Cliff</h1>
@@ -87,7 +89,8 @@
     <!-- MENU: the full menu is a one-page PDF (menu/menu.html, re-render with menu/render.sh) shown in a pop-up -->
     <section class="menu" id="menu" data-studio-section="menu">
       <a class="menu-card fall-card" href="latte-haus-fall-menu.pdf" data-menu="fall" aria-label="Open the fall menu">
-        <img data-studio="fall-photo" data-studio-label="Fall photo" src="images/fall-trio.jpg" width="1000" height="1250" alt="The three fall drinks lined up on a white pedestal with fall leaves at Latte Haus" loading="lazy">
+        <!-- Fall drinks trading places on the pedestal (Lee's fall shoot). Plays silently while on screen; poster shows until then. -->
+        <video class="fall-video" muted playsinline loop preload="none" poster="media/fall-swap-poster.jpg" data-src="media/fall-swap.mp4" width="800" height="1000" aria-label="The three fall drinks set down one after another on a white pedestal"></video>
         <span class="fall-tag" data-studio="fall-tag" data-studio-label="Fall tag">New · The fall menu</span>
       </a>
       <div class="menu-copy">

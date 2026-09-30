@@ -58,6 +58,7 @@ h2.display { font-size: clamp(40px, 5.2vw, 72px); }
 /* ---------- hero: full-screen photo, sign line centered (Onyx-style) ---------- */
 .hero { position: relative; height: 100svh; min-height: 560px; max-height: 1200px; display: grid; place-items: center; overflow: hidden; background: #6b4a26; color: #ffffff; }
 .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.hero-video { display: none; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 45% at 50% 50%, rgba(70, 46, 20, .3), rgba(70, 46, 20, 0) 100%), linear-gradient(180deg, rgba(96, 64, 30, .5) 0%, rgba(122, 86, 44, .34) 32%, rgba(122, 86, 44, .38) 64%, rgba(90, 60, 28, .56) 100%); pointer-events: none; }
 .hero-center { position: relative; z-index: 1; text-align: center; padding: 0 16px; }
 .hero-eyebrow { margin: 0 0 22px; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
@@ -78,7 +79,7 @@ h2.display { font-size: clamp(40px, 5.2vw, 72px); }
 .menu-card img { width: 100%; }
 .fall-card { position: relative; box-shadow: none; }
 .fall-card:hover { box-shadow: none; }
-.fall-card img { aspect-ratio: 4 / 5; object-fit: cover; }
+.fall-card img, .fall-video { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; background: #2a211a; }
 .fall-tag { position: absolute; left: 16px; bottom: 16px; background: #ffffff; padding: 10px 14px; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--btn-ink); }
 .menu-index { margin-top: 30px; max-width: 520px; border-top: 2px solid var(--rail); }
 .mi-row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 13px 0 12px; background: linear-gradient(var(--rail), var(--rail)) left bottom / 100% 2px no-repeat; }
@@ -170,6 +171,7 @@ h2.display { font-size: clamp(40px, 5.2vw, 72px); }
   .header-nav .status { font-size: 11px; letter-spacing: .14em; }
 
   .hero { min-height: 520px; }
+  .hero-video { display: block; }
   .hero-img { object-position: 50% 50%; }
   .hero h1 { font-size: clamp(40px, 11.4vw, 48px); }
   .hero-eyebrow { font-size: 11px; margin-bottom: 18px; }
