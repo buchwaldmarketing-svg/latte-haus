@@ -104,10 +104,20 @@ if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObse
       io.unobserve(entry.target);
     });
   }, { rootMargin: '0px 0px -12% 0px' });
+  const pending = [];
   document.querySelectorAll('.menu-card, .menu-copy, .menu-index, .story-photos, .story-copy, .quotes, .ig-head, .ig-grid, .order-photo, .order-copy, .visit').forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight) return;
     el.classList.add('will-reveal');
     io.observe(el);
+    pending.push(el);
   });
+  // Backup for browsers that pause or skip the observer: reveal anything that's already on screen.
+  let ticking = false;
+  const sweep = () => {
+    ticking = false;
+    pending.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight * 0.95) el.classList.add('in'); });
+  };
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; setTimeout(sweep, 60); } }, { passive: true });
+  setTimeout(sweep, 1500);
 }
 
