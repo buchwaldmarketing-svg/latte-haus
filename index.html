@@ -25,7 +25,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500..800&family=Hanken+Grotesk:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="images/hero-storefront.jpg">
+  <link rel="preload" as="image" href="images/hero-storefront.jpg" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="media/hero-reel-poster.jpg" media="(max-width: 767px)">
   <link rel="stylesheet" href="styles.css">
 
   <script type="application/ld+json">
@@ -76,9 +77,13 @@
 
     <!-- HERO: full-screen storefront photo (same shot as the live site), Onyx-style. Header floats on top in white; the sign line sits centered on the image. -->
     <section class="hero" data-studio-section="hero">
-      <img class="hero-img" data-studio="photo" src="images/hero-storefront.jpg" width="1600" height="2315" alt="The Latte Haus storefront on W Kiest Blvd in Oak Cliff" fetchpriority="high">
+      <!-- Phones start on the reel's first frame (no storefront flash before the video); desktop gets the storefront. -->
+      <picture>
+        <source media="(max-width: 767px)" srcset="media/hero-reel-poster.jpg" width="720" height="1280">
+        <img class="hero-img" data-studio="photo" src="images/hero-storefront.jpg" width="1600" height="2315" alt="The Latte Haus storefront on W Kiest Blvd in Oak Cliff" fetchpriority="high">
+      </picture>
       <!-- Phones only: behind-the-scenes reel (Lee's fall shoot). script.js loads it on small screens; desktop keeps the storefront photo. -->
-      <video class="hero-video" muted playsinline loop preload="none" poster="media/hero-reel-poster.jpg" data-src="media/hero-reel.mp4" aria-hidden="true"></video>
+      <video class="hero-video" muted playsinline loop preload="none" data-src="media/hero-reel.mp4" aria-hidden="true"></video>
       <div class="hero-center">
         <p class="hero-eyebrow" data-studio="eyebrow">Oak Cliff · Dallas, Texas</p>
         <h1 class="display" data-studio="headline" data-studio-type="richtext">With <em>latte</em> love<br>from Oak Cliff</h1>
@@ -242,9 +247,9 @@
   </dialog>
 
   <nav class="action-bar" aria-label="Quick actions">
-    <a href="https://ig.me/m/lattehauscoffee" target="_blank" rel="noopener" class="btn btn-solid">Order ahead</a>
+    <a href="https://maps.google.com/?q=2446+W+Kiest+Blvd+Dallas+TX+75233" target="_blank" rel="noopener" class="btn btn-solid">Directions</a>
     <a href="latte-haus-menu.pdf" data-menu class="btn btn-line">Menu</a>
-    <a href="https://maps.google.com/?q=2446+W+Kiest+Blvd+Dallas+TX+75233" target="_blank" rel="noopener" class="btn btn-line">Directions</a>
+    <a href="latte-haus-fall-menu.pdf" data-menu="fall" class="btn btn-line">Fall menu</a>
   </nav>
 
   <script src="script.js"></script>

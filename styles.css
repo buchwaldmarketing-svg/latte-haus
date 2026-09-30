@@ -267,3 +267,8 @@ h2.display { font-size: clamp(40px, 5.2vw, 72px); }
 @keyframes lh-fade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes lh-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
 @keyframes lh-pop { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
+
+/* phones: the hero image is the reel's first frame, so no push-in (it would jump when the video takes over) */
+@media (max-width: 767px) {
+  .hero-img { animation: none; object-position: 50% 50%; }
+}
