@@ -1,7 +1,7 @@
 // ===== Open/closed status (Dallas time) =====
 // Hours come from the Hours rows on the page (editable in Studio). HOURS is the fallback.
 const HOURS = {
-  0: { open: [8, 0], close: [11, 0] },
+  0: { open: [8, 0], close: [15, 0] },
   1: { open: [7, 0], close: [19, 0] },
   2: { open: [7, 0], close: [19, 0] },
   3: { open: [7, 0], close: [19, 0] },
@@ -73,7 +73,7 @@ onScroll();
 
 // ===== Menu pop-ups (regular + fall share one dialog). Without <dialog> support the links just open the PDF. =====
 const MENUS = {
-  main: { pdf: 'latte-haus-menu.pdf', img: 'images/menu.webp', phone: 'images/menu-mobile.webp', w: 1632, h: 2112, label: 'The menu', alt: 'The full Latte Haus menu: lattes, coffee, drinks and sweets with prices' },
+  main: { pdf: 'latte-haus-menu.pdf', img: 'images/menu-v2.webp', phone: 'images/menu-v2-mobile.webp', w: 1632, h: 2112, label: 'The menu', alt: 'The full Latte Haus menu: lattes, coffee, drinks and sweets with prices' },
   fall: { pdf: 'latte-haus-fall-menu.pdf', img: 'images/fall-menu-v2.webp', phone: 'images/fall-menu-v2-mobile.webp', w: 1632, h: 2112, label: 'The fall menu', alt: 'The Latte Haus fall menu: Calabaza Latte, Pumpkin Pie Cold Brew and Calabaza Chai' },
 };
 const dlg = document.getElementById('menu-modal');

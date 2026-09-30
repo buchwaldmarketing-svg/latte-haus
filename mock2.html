@@ -426,7 +426,7 @@
         <table class="hours">
           <tr><td>Monday – Friday</td><td>7 AM – 7 PM</td></tr>
           <tr><td>Saturday</td><td>8 AM – 4 PM</td></tr>
-          <tr><td>Sunday</td><td>8 AM – 11 AM</td></tr>
+          <tr><td>Sunday</td><td>8 AM – 3 PM</td></tr>
         </table>
         <a class="btn btn-light" href="https://maps.google.com/?q=Latte+Haus+2446+W+Kiest+Blvd+Dallas+TX+75233" target="_blank" rel="noopener">Get Directions</a>
       </div>
@@ -449,7 +449,7 @@
       }).formatToParts(now).reduce((acc, p) => (acc[p.type] = p.value, acc), {});
       const mins = parseInt(chicago.hour, 10) * 60 + parseInt(chicago.minute, 10);
       const day = chicago.weekday;
-      const windows = { Mon: [420, 1140], Tue: [420, 1140], Wed: [420, 1140], Thu: [420, 1140], Fri: [420, 1140], Sat: [480, 960], Sun: [480, 660] };
+      const windows = { Mon: [420, 1140], Tue: [420, 1140], Wed: [420, 1140], Thu: [420, 1140], Fri: [420, 1140], Sat: [480, 960], Sun: [480, 900] };
       const w = windows[day];
       const open = w && mins >= w[0] && mins < w[1];
       const fmt = m => {
