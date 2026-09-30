@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Latte Haus share card</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..800;1,500&family=Hanken+Grotesk:wght@500..700&display=block">
+<style>
+  /* Link preview card (1200x630). Render: menu/render-og.sh → images/og-card-v2.jpg. New filename on every change (social + browser caches). */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: #ffffff; }
+  body { display: grid; grid-template-columns: 560px 1fr; font-family: "Hanken Grotesk", Arial, sans-serif; color: #141414; }
+  .photo { background: url(og-photo.jpg) center / cover no-repeat; }
+  .panel { position: relative; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; }
+  .panel::before { content: ""; position: absolute; inset: 26px; border: 2px solid #B8965A; }
+  .label { font-size: 15px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #8C6A1F; }
+  h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 104px; line-height: .95; letter-spacing: -.02em; margin: 22px 0 26px; }
+  .line { font-family: "Playfair Display", Georgia, serif; font-weight: 600; font-size: 34px; line-height: 1.2; }
+  .line em { font-style: italic; font-weight: 500; color: #A8842F; }
+  .rule { width: 64px; height: 2px; background: #E2D3BD; margin: 30px 0 22px; }
+  .addr { font-size: 15px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+  <div class="photo"></div>
+  <div class="panel">
+    <p class="label">Coffee · Matcha · Pastries</p>
+    <h1>Latte Haus</h1>
+    <p class="line">With <em>latte</em> love from Oak Cliff</p>
+    <div class="rule"></div>
+    <p class="addr">2446 W Kiest Blvd · Dallas</p>
+  </div>
+</body>
+</html>
