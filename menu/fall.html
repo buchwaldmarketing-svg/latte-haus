@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Latte Haus · Fall Menu</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..800;1,500&family=Hanken+Grotesk:wght@400..700&display=block">
+<style>
+  /* Fall menu, one Letter page. Same paper + gold frame as menu.html, photos from Lee's fall shoot.
+     PLACEHOLDER drink names + descriptions (Lee named them 2026-09-30); confirm with Emily, then add prices.
+     Re-render with menu/render.sh after any edit. */
+  @page { size: 8.5in 11in; margin: 0; }
+  :root { --ink: #141414; --gold: #B8965A; --rail: #E2D3BD; --mute: #6A635E; --honey: #8C6A1F; --honey-big: #A8842F; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 816px; height: 1056px; }
+  body { background: #FFFFFF; color: var(--ink); font-family: "Hanken Grotesk", Arial, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; overflow: hidden; position: relative; }
+  .frame { position: absolute; inset: 22px; border: 1.5px solid var(--gold); pointer-events: none; }
+  .page { height: 100%; padding: 50px 58px 40px; display: flex; flex-direction: column; justify-content: space-between; }
+  .track { font-size: 10.5px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+
+  header { text-align: center; padding-bottom: 26px; border-bottom: 2px solid var(--ink); }
+  header .track { color: var(--honey); }
+  h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 64px; line-height: 1; letter-spacing: -.015em; margin: 12px 0 10px; }
+  h1 em { font-style: italic; font-weight: 500; color: var(--honey-big); }
+  header p.sub { font-size: 13px; color: var(--mute); }
+
+  .drinks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; padding-top: 30px; }
+  .drink img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+  .drink h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 25px; line-height: 1.1; margin-top: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--rail); }
+  .drink p { font-size: 12.5px; line-height: 1.45; color: var(--mute); margin-top: 10px; }
+  .band { display: block; width: 100%; height: 270px; object-fit: cover; margin: 6px 0 26px; }
+
+  footer { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-top: 14px; border-top: 2px solid var(--ink); }
+  .sign-off { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 21px; }
+
+  /* Phone version for the pop-up: photo left, words right. Screenshot at 500px wide. */
+  @media screen and (max-width: 600px) {
+    html, body { width: 500px; height: auto; }
+    body { overflow: visible; }
+    .frame { inset: 14px; }
+    .page { height: auto; padding: 46px 36px 40px; }
+    h1 { font-size: 58px; }
+    header p.sub { font-size: 15px; }
+    .track { font-size: 12px; }
+    .drinks { display: block; padding-top: 10px; }
+    .drink { display: grid; grid-template-columns: 170px 1fr; gap: 20px; align-items: center; padding: 22px 0; border-bottom: 2px solid var(--rail); }
+    .drink h2 { font-size: 27px; margin-top: 0; border-bottom: 0; padding-bottom: 0; }
+    .drink p { font-size: 15px; }
+    .band { display: none; }
+    footer { flex-direction: column; gap: 8px; margin-top: 28px; }
+    .sign-off { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+  <div class="frame" aria-hidden="true"></div>
+  <div class="page">
+    <header>
+      <p class="track">Latte Haus · Seasonal</p>
+      <h1>The <em>fall</em> menu</h1>
+      <p class="sub">Three new pours for sweater weather.</p>
+    </header>
+    <div class="drinks">
+      <div class="drink">
+        <img src="../images/fall-menu-calabasa.jpg" alt="">
+        <div>
+          <h2>Calabasa Latte</h2>
+          <p>Pumpkin, warm spice and espresso, finished with spiced cold foam.</p>
+        </div>
+      </div>
+      <div class="drink">
+        <img src="../images/fall-menu-cold-brew.jpg" alt="">
+        <div>
+          <h2>Maple Cream Cold Brew</h2>
+          <p>Slow steeped cold brew under a cap of maple sweet cream.</p>
+        </div>
+      </div>
+      <div class="drink">
+        <img src="../images/fall-menu-churro.jpg" alt="">
+        <div>
+          <h2>Churro Latte</h2>
+          <p>Cinnamon sugar and caramel stirred into a creamy latte.</p>
+        </div>
+      </div>
+    </div>
+    <img class="band" src="../images/fall-menu-band.jpg" alt="">
+    <footer>
+      <p class="sign-off">With latte love from Oak Cliff</p>
+      <p class="track">@lattehauscoffee</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -71,19 +71,28 @@ const onScroll = () => {
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 
-// ===== Menu pop-up. Without <dialog> support the links just open the PDF. =====
+// ===== Menu pop-ups (regular + fall share one dialog). Without <dialog> support the links just open the PDF. =====
+const MENUS = {
+  main: { pdf: 'latte-haus-menu.pdf', img: 'images/menu.webp', phone: 'images/menu-mobile.webp', w: 1632, h: 2112, label: 'The menu', alt: 'The full Latte Haus menu: lattes, coffee, drinks and sweets with prices' },
+  fall: { pdf: 'latte-haus-fall-menu.pdf', img: 'images/fall-menu.webp', phone: 'images/fall-menu-mobile.webp', w: 1632, h: 2112, label: 'The fall menu', alt: 'The Latte Haus fall menu: Calabasa Latte, Maple Cream Cold Brew and Churro Latte' },
+};
 const dlg = document.getElementById('menu-modal');
 if (dlg && typeof dlg.showModal === 'function') {
-  const img = dlg.querySelector('img[data-src]');
+  const img = dlg.querySelector('img');
+  const source = dlg.querySelector('source');
   const root = document.documentElement;
   document.querySelectorAll('[data-menu]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      if (img && !img.src) {
-        const source = dlg.querySelector('source[data-srcset]');
-        if (source) source.srcset = source.dataset.srcset;
-        img.src = img.dataset.src;
-      }
+      const m = MENUS[link.dataset.menu] || MENUS.main;
+      source.srcset = m.phone;
+      img.src = m.img;
+      img.width = m.w;
+      img.height = m.h;
+      img.alt = m.alt;
+      dlg.querySelector('.mm-bar .label').textContent = m.label;
+      dlg.querySelector('.mm-download').href = m.pdf;
+      dlg.setAttribute('aria-label', `Latte Haus ${m.label.toLowerCase()}`);
       dlg.showModal();
       dlg.scrollTop = 0;
       root.style.overflow = 'hidden';

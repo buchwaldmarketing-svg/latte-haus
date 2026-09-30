@@ -86,8 +86,9 @@
 
     <!-- MENU: the full menu is a one-page PDF (menu/menu.html, re-render with menu/render.sh) shown in a pop-up -->
     <section class="menu" id="menu" data-studio-section="menu">
-      <a class="menu-card" href="latte-haus-menu.pdf" data-menu aria-label="Open the full menu">
-        <img src="images/menu-thumb.webp" width="816" height="1056" alt="The Latte Haus menu" loading="lazy">
+      <a class="menu-card fall-card" href="latte-haus-fall-menu.pdf" data-menu="fall" aria-label="Open the fall menu">
+        <img data-studio="fall-photo" data-studio-label="Fall photo" src="images/fall-trio.jpg" width="1000" height="1250" alt="The three fall drinks lined up on a white pedestal with fall leaves at Latte Haus" loading="lazy">
+        <span class="fall-tag" data-studio="fall-tag" data-studio-label="Fall tag">New · The fall menu</span>
       </a>
       <div class="menu-copy">
         <p class="label">The menu</p>
@@ -102,8 +103,8 @@
         </div>
         <div class="menu-btns">
           <a class="btn btn-solid" href="latte-haus-menu.pdf" data-menu data-studio="menu-button" data-studio-label="Menu button">See the menu</a>
-          <!-- Fall menu slot: when it's ready, make this a real link to its PDF like the button above -->
-          <span class="btn btn-soon" aria-disabled="true">Fall menu <small>Soon</small></span>
+          <!-- Fall menu: menu/fall.html (PLACEHOLDER names from Lee 2026-09-30, confirm with Emily), re-render with menu/render.sh -->
+          <a class="btn btn-line" href="latte-haus-fall-menu.pdf" data-menu="fall" data-studio="fall-button" data-studio-label="Fall menu button">Fall menu</a>
         </div>
       </div>
     </section>
@@ -111,8 +112,8 @@
     <!-- ABOUT US -->
     <section class="story" id="story" data-studio-section="about" data-studio-section-label="Our story">
       <div class="story-photos">
-        <img data-studio="photo" src="images/interior-lounge.jpg" width="800" height="1200" alt="The lounge at Latte Haus with a cream sofa, arched doorway and big front windows" loading="lazy">
-        <img data-studio="photo-2" data-studio-label="Second photo" src="images/mirror-mascot.jpg" width="800" height="1200" alt="Arched mirror with the Latte Haus smiling cup drawn on it" loading="lazy">
+        <img data-studio="photo" src="images/fall-room.jpg" width="1000" height="1500" alt="Inside Latte Haus: the gold Latte Haus sign over a tufted banquette, marble tables and a globe chandelier" loading="lazy">
+        <img data-studio="photo-2" data-studio-label="Second photo" src="images/fall-pedestal.jpg" width="800" height="1067" alt="An iced latte on a white pedestal in front of the smiling Latte Haus mascot wall, with pumpkins" loading="lazy">
       </div>
       <div class="story-copy">
         <p class="label">Our story</p>
@@ -151,19 +152,19 @@
         <a class="btn btn-line" href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener">Follow along</a>
       </div>
       <div class="ig-grid">
-        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-1" data-studio-label="Photo 1" src="images/fruity-pebbles-pair.jpg" alt="Fruity Pebbles Lattes, matcha and coffee" loading="lazy"></a>
-        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-2" data-studio-label="Photo 2" src="images/pistachio-foam-topdown.jpg" alt="Pistachio cold foam from above" loading="lazy"></a>
-        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-3" data-studio-label="Photo 3" src="images/wall-sign-interior.jpg" alt="The With latte love from Oak Cliff sign above pink velvet chairs" loading="lazy"></a>
-        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-4" data-studio-label="Photo 4" src="images/matcha-held-bouquet.jpg" alt="Blueberry Muffin Matcha held next to a bouquet" loading="lazy"></a>
-        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-5" data-studio-label="Photo 5" src="images/horchata-cinnamon-sprinkle.jpg" alt="Cinnamon sprinkled over Horchata Lattes" loading="lazy"></a>
-        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-6" data-studio-label="Photo 6" src="images/latte-art.jpg" alt="Latte art in front of a Latte Haus apron" loading="lazy"></a>
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-1" data-studio-label="Photo 1" src="images/ig-matcha-whisk.jpg" width="800" height="800" alt="Hot water poured over matcha as it is whisked" loading="lazy"></a>
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-2" data-studio-label="Photo 2" src="images/ig-espresso.jpg" width="800" height="800" alt="A shot pulling on the Latte Haus espresso machine" loading="lazy"></a>
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-3" data-studio-label="Photo 3" src="images/ig-calabasa.jpg" width="800" height="800" alt="Calabasa Latte with fall leaves and a pinecone" loading="lazy"></a>
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-4" data-studio-label="Photo 4" src="images/ig-matcha-counter.jpg" width="800" height="800" alt="Two matcha drinks being made at the counter" loading="lazy"></a>
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-5" data-studio-label="Photo 5" src="images/ig-cold-brew.jpg" width="800" height="800" alt="Maple Cream Cold Brew with fall leaves" loading="lazy"></a>
+        <a href="https://www.instagram.com/lattehauscoffee/" target="_blank" rel="noopener"><img data-studio="photo-6" data-studio-label="Photo 6" src="images/ig-fall-trio.jpg" width="800" height="800" alt="The three fall drinks on a pedestal by the mascot wall" loading="lazy"></a>
       </div>
     </section>
 
     <!-- DM TO ORDER -->
     <section class="order" id="order" data-studio-section="order" data-studio-section-label="Order ahead">
       <figure class="order-photo">
-        <img data-studio="photo" src="images/pink-drinks-phone.jpg" width="944" height="1200" alt="Taking a phone photo of pink drinks and roses at Latte Haus" loading="lazy">
+        <img data-studio="photo" src="images/fall-pour.jpg" width="1000" height="1250" alt="Milk pouring into an iced latte with a caramel swirl" loading="lazy">
       </figure>
       <div class="order-copy">
         <p class="label">Skip the wait</p>
@@ -223,14 +224,14 @@
     <div class="mm-bar">
       <p class="label">The menu</p>
       <div class="mm-actions">
-        <a class="btn btn-line" href="latte-haus-menu.pdf" download>Download PDF</a>
+        <a class="btn btn-line mm-download" href="latte-haus-menu.pdf" download>Download PDF</a>
         <button class="btn btn-solid mm-close" type="button">Close</button>
       </div>
     </div>
     <div class="mm-body">
       <picture>
-        <source media="(max-width: 700px)" data-srcset="images/menu-mobile.webp" width="1000" height="5857">
-        <img data-src="images/menu.webp" width="1632" height="2112" alt="The full Latte Haus menu: lattes, coffee, drinks and sweets with prices">
+        <source media="(max-width: 700px)">
+        <img width="1632" height="2112" alt="">
       </picture>
     </div>
   </dialog>
