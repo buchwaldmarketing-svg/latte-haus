@@ -177,7 +177,8 @@ h2.display { font-size: clamp(40px, 5.2vw, 72px); }
   .hero h1 { font-size: clamp(40px, 11.4vw, 48px); }
   .hero-eyebrow { font-size: 11px; margin-bottom: 18px; }
   .hero .status { margin-top: 24px; font-size: 11px; letter-spacing: .14em; }
-  .scroll-cue { bottom: calc(84px + env(safe-area-inset-bottom)); }
+  .scroll-cue { display: none; }
+  .hero { padding: var(--header) 0 calc(68px + env(safe-area-inset-bottom)); }
 
   .menu { grid-template-columns: 1fr; gap: 36px; padding: 72px 16px 64px; }
   .menu-card { order: 2; width: 100%; max-width: none; }
