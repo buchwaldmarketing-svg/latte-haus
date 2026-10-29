@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..800;1,500&family=Hanken+Grotesk:wght@400..700&display=block">
 <style>
   /* Fall menu, one Letter page. Same paper + gold frame as menu.html, photos from Lee's fall shoot.
-     Drink names CONFIRMED by Lee/Emily 2026-09-30. Descriptions are still placeholder wording; no prices yet.
+     Drink names CONFIRMED by Lee/Emily 2026-09-30. Calabaza Latte + Pumpkin Pie Cold Brew prices/descriptions from Emily's board 2026-10-28; Calabaza Chai still placeholder, no price.
      Re-render with menu/render.sh after any edit. */
   @page { size: 8.5in 11in; margin: 0; }
   :root { --ink: #141414; --gold: #B8965A; --rail: #E2D3BD; --mute: #6A635E; --honey: #8C6A1F; --honey-big: #A8842F; }
@@ -26,6 +26,7 @@
   .drinks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; padding-top: 30px; }
   .drink img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
   .drink h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 25px; line-height: 1.1; margin-top: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--rail); }
+  .drink h2 .price { display: block; margin-top: 6px; font-family: "Hanken Grotesk", Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--honey); font-variant-numeric: tabular-nums; }
   .drink p { font-size: 12.5px; line-height: 1.45; color: var(--mute); margin-top: 10px; }
   .band { display: block; width: 100%; height: 270px; object-fit: cover; margin: 6px 0 26px; }
 
@@ -63,15 +64,15 @@
       <div class="drink">
         <img src="../images/fall-menu-calabasa.jpg" alt="">
         <div>
-          <h2>Calabaza Latte</h2>
-          <p>Pumpkin, warm spice and espresso, finished with spiced cold foam.</p>
+          <h2>Calabaza Latte<span class="price">$6.75 / $7.50</span></h2>
+          <p>Sweetened condensed milk + pumpkin pie sauce + pumpkin pie cold foam.</p>
         </div>
       </div>
       <div class="drink">
         <img src="../images/fall-menu-cold-brew.jpg" alt="">
         <div>
-          <h2>Pumpkin Pie Cold Brew</h2>
-          <p>Slow steeped cold brew under a cap of pumpkin pie sweet cream.</p>
+          <h2>Pumpkin Pie Cold Brew<span class="price">$5 / $6</span></h2>
+          <p>Cold brew + pumpkin pie cold foam.</p>
         </div>
       </div>
       <div class="drink">

@@ -73,8 +73,8 @@ onScroll();
 
 // ===== Menu pop-ups (regular + fall share one dialog). Without <dialog> support the links just open the PDF. =====
 const MENUS = {
-  main: { pdf: 'latte-haus-menu.pdf', img: 'images/menu-v2.webp', phone: 'images/menu-v2-mobile.webp', w: 1632, h: 2112, label: 'The menu', alt: 'The full Latte Haus menu: lattes, coffee, drinks and sweets with prices' },
-  fall: { pdf: 'latte-haus-fall-menu.pdf', img: 'images/fall-menu-v2.webp', phone: 'images/fall-menu-v2-mobile.webp', w: 1632, h: 2112, label: 'The fall menu', alt: 'The Latte Haus fall menu: Calabaza Latte, Pumpkin Pie Cold Brew and Calabaza Chai' },
+  main: { pdf: 'latte-haus-menu.pdf', img: 'images/menu-v3.webp', phone: 'images/menu-v3-mobile.webp', w: 1632, h: 2112, label: 'The menu', alt: 'The full Latte Haus menu: lattes, coffee, drinks and sweets with prices' },
+  fall: { pdf: 'latte-haus-fall-menu.pdf', img: 'images/fall-menu-v3.webp', phone: 'images/fall-menu-v3-mobile.webp', w: 1632, h: 2112, label: 'The fall menu', alt: 'The Latte Haus fall menu: Calabaza Latte, Pumpkin Pie Cold Brew and Calabaza Chai' },
 };
 const dlg = document.getElementById('menu-modal');
 if (dlg && typeof dlg.showModal === 'function') {
