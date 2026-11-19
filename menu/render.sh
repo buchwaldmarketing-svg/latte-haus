@@ -28,7 +28,7 @@ print(n, 'mobile', m.size)
 PY
 }
 
-render menu.html latte-haus-menu.pdf menu-v3
+render menu.html latte-haus-menu.pdf menu-v4
 # Image names are cached for a year: bump the -vN prefix (and script.js MENUS) whenever the fall menu changes.
-render fall.html latte-haus-fall-menu.pdf fall-menu-v3
-ls -la latte-haus-menu.pdf latte-haus-fall-menu.pdf images/menu-v3*.webp images/fall-menu-v3*.webp
+render fall.html latte-haus-fall-menu.pdf fall-menu-v4
+ls -la latte-haus-menu.pdf latte-haus-fall-menu.pdf images/menu-v4*.webp images/fall-menu-v4*.webp
